@@ -1,9 +1,12 @@
-# Ignora tutto il contenuto di data e backup
-data/**/*
-backup/*
-
-# Eccezioni: NON ignorare i file .gitkeep (senza spazi!)
-!**/.gitkeep
-
-# Resto delle esclusioni
+# Esclusioni principali
 node_modules/
+backup/cluster_*
+backup/immagine_*
+
+# Gestione DATA: ignora i file ma tieni le cartelle
+data/**/*.json
+data/**/*.json_bck*
+
+# MAI ignorare i .gitkeep
+!.gitkeep
+!**/.gitkeep
