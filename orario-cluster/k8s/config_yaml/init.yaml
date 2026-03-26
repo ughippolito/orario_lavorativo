@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gestione-orarioapiVersion: v1
+kind: Namespace
+metadata:
+  name: gestione-orario

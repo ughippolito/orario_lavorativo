@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro Orario Lavorativo</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --bg: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --border: #cbd5e1;
+            --surface: #ffffff;
+            --surface-alt: #f8fafc;
+            --primary: #0d6efd;
+            --danger: #dc3545;
+            --r: .5rem;
+            --s-2: 1rem;
+        }
+
+        tr.row-holiday {
+            background-color: #fff1f2 !important;
+        }
+
+        .dark-mode tr.row-holiday {
+            background-color: #450a0a !important;
+        }
+
+        body.dark-mode {
+            color-scheme: dark;
+            --bg: #0f172a;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #334155;
+            --surface: #1e293b;
+            --surface-alt: #0f172a;
+            --primary: #3b82f6;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            transition: background 0.3s;
+        }
+
+        header {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-title h1 {
+            margin: 0;
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .subtitle {
+            margin-top: 2px;
+            font-size: .95rem;
+            color: var(--muted);
+        }
+
+        .header-meta {
+            font-size: .9rem;
+            color: var(--muted);
+        }
+
+        .header-datetime-container {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .header-datetime-container .time {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+		
+
+        .page {
+            display: flex;
+            gap: 1.5rem;
+            padding: 0 1rem 1rem;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .right-column {
+            width: 20%;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            padding: 24px;
+            margin-bottom: var(--s-2);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: .35rem;
+        }
+
+        input, select {
+            width: 100%;           /* Tutti larga uguale */
+            height: 38px;          /* Altezza uniforme per tutti */
+            padding: 8px;
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+            background-color: var(--surface);
+            color: var(--text);
+            display: block;        /* Assicura che vadano a capo correttamente se necessario */
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        }
+
+        .summary-item {
+            text-align: center;
+            padding: .6rem;
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: var(--r);
+        }
+
+        .value {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .summary-danger {
+            color: var(--danger) !important;
+        }
+
+        .btn {
+            padding: .6rem .9rem;
+            border-radius: .45rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: 0.2s;
+        }
+
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-secondary { background: #e2e8f0; color: #0f172a; }
+        .btn-danger { background: var(--danger); color: #fff; }
+        .btn-dark-toggle { background: #334155; color: #ffffff; border: 1px solid #334155; }
+        .btn-dark-toggle:hover { background: #1e293b; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        thead th {
+            background: var(--surface-alt);
+            padding: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        th.active-sort {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        tbody td {
+            padding: 10px;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .status-bar {
+            display: flex;
+            gap: 10px;
+            background: #ffffff;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            align-items: center;
+            font-size: 0.8rem;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .chip {
+            background: #f1f5f9;
+            padding: 4px 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .chip .label {
+            font-weight: 800;
+            color: #475569;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+        }
+
+        .chip.info { background: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+        .chip.success { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+        .chip.warn { background: #fef3c7; color: #92400e; border-color: #fde68a; }
+
+        .status-spacer { flex-grow: 1; }
+
+        @media (max-width: 768px) {
+            .status-bar { flex-wrap: wrap; }
+            .status-spacer { display: none; }
+        }
+		
+		/* Stile per il Tooltip */
+        .tooltip-container {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            margin-left: 5px;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: var(--surface);
+            color: var(--text);
+            text-align: center;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%; /* Appare sopra l'icona */
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 0.75rem;
+            font-weight: normal;
+            line-height: 1.4;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Gestione Ore Lavoro versione 3.0</h1>
+                <h2 class="subtitle">Sistema di monitoraggio presenze</h2>
+                <div class="header-meta">
+                    Mese: <strong id="mese-label">...</strong> | 
+                    Anno: <strong id="anno-label">...</strong>
+                </div>
+            </div>
+            <div class="header-datetime-container">
+                <div>
+                    <div id="date-display" class="date-display"></div>
+                    <div id="time-display" class="time"></div>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button id="theme-toggle" class="btn btn-dark-toggle">🌙 Dark Mode</button>
+				<button id="btn-config" class="btn btn-primary">⚙️ Configura</button>
+                <button id="export-csv" class="btn btn-primary">⬇ Esporta</button>
+				<a href="/download-manuale" style="text-decoration: none;">
+                    <button id="btn-manuale" class="btn btn-primary" type="button">📄 Manuale</button>
+                </a>
+                <button id="exit-page" class="btn btn-danger">✕ Esci</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        <main class="main-content">
+            <section class="section">
+                <h2>Inserimento Dati</h2>
+                <div class="form-grid">
+                    <div class="form-row"><label>Data</label><input type="date" id="data"></div>
+                    <div class="form-row"><label>Entrata</label><input type="time" id="entrata"></div>
+                    <div class="form-row">
+                        <label>Sede</label>
+                        <select id="sede">
+                            <option value="">— seleziona —</option>
+                            <option>Assenza</option>
+							<option>Fuori Sede</option>
+							<option>In Sede</option>							
+                            <option>Smart Working</option>                          
+                        </select>
+                    </div>
+                    <div class="form-row"><label>Uscita</label><input type="time" id="uscita"></div>
+                    <div class="form-row">
+                        <label>
+                            Uscita Teorica 
+                            <span class="chip info" style="display:inline-flex; font-size:0.6rem; padding:2px 5px; margin-left:5px; vertical-align: middle;">AUTO</span>
+                        </label>
+                        <input type="time" id="uscita-teorica" readonly 
+                               style="cursor: not-allowed; opacity: 0.8;">
+                    </div>
+                    <div class="form-row"><label>Note</label><input type="text" id="note"></div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+                    <button class="btn btn-primary" id="btn-salva">SALVA</button>
+                    <button class="btn btn-secondary" id="btn-ripristina-form">ANNULLA</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Contatori</h2>
+                <div class="summary-grid">
+                    <div class="summary-item"><div>Giornate</div><div class="value" id="tot-giornate">0</div></div>
+                    <div class="summary-item"><div>Ore Presenza</div><div class="value" id="ore-presenza">0:00</div></div>
+                    <div class="summary-item"><div>Diff. Totale</div><div class="value" id="diff-totale">0:00</div></div>
+                    <div class="summary-item"><div>Rientri</div><div class="value" id="rientri">0</div></div>
+                    <div class="summary-item"><div>Smart</div><div class="value" id="smart-count">0</div></div>
+                    <div class="summary-item"><div>Assenze</div><div class="value" id="assenze-count">0</div></div>
+                </div>
+            </section>
+
+            <div class="status-bar" id="status-bar" aria-live="polite">
+                <div class="chip info" id="chip-origin">
+                    <span class="label">Origine:</span> <span id="status-origin">Database locale</span>
+                </div>
+                <div class="chip success" id="status-view-chip">
+                    <span class="label">Vista:</span> <span id="status-view">—</span>
+                </div>
+                <div class="chip" id="status-filters-chip">
+                    <span class="label">Filtri:</span> <span id="status-filters">Nessun filtro</span>
+                </div>
+                <div class="status-spacer"></div>
+                <div class="chip warn">
+                    <span class="label">Righe:</span> <span id="status-counts">0/0</span>
+                </div>
+            </div>
+
+            <section class="section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="th-date" data-label="Data" onclick="sortBy('date')" style="cursor:pointer">Data ↓</th>
+                            <th id="th-sede" data-label="Sede" onclick="sortBy('sede')" style="cursor:pointer">Sede ↕</th>
+                            <th id="th-entrata" data-label="Entrata" onclick="sortBy('entrata')" style="cursor:pointer">Entrata ↕</th>
+                            <th id="th-uscita" data-label="Uscita" onclick="sortBy('uscita')" style="cursor:pointer">Uscita ↕</th>
+                            <th id="th-presenza" data-label="Presenza" onclick="sortBy('presenza')" style="cursor:pointer">Presenza (h) ↕</th>
+                            <th id="th-uscita-prev" data-label="Uscita Prevista" onclick="sortBy('uscita_teorica')" style="cursor:pointer">Uscita Prevista ↕</th>
+                            <th id="th-diff" data-label="Diff" onclick="sortBy('diff')" style="cursor:pointer">Diff (h) ↕</th>
+                            <th>Note</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+                <div class="section mt-3" id="pager" aria-label="paginazione" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-secondary btn-sm" id="first-page">« Prima</button>
+                            <button class="btn btn-secondary btn-sm" id="prev-page">‹ Prec.</button>
+                            <span id="page-buttons" class="d-flex gap-1 mx-1"></span>
+                            <button class="btn btn-secondary btn-sm" id="next-page">Succ. ›</button>
+                            <button class="btn btn-secondary btn-sm" id="last-page">Ultima »</button>
+                        </div>
+                        <div class="text-muted small" id="page-info" style="font-weight: bold;">Pagina 1 di 1</div>
+                        <div class="d-flex align-items: center; gap: 0.5rem;">
+                            <label for="page-size" class="small mb-0" style="white-space: nowrap;">Righe per pagina:</label>
+                            <select id="page-size" class="form-select form-select-sm" style="width: auto;">
+                                <option value="10">10</option>
+                                <option value="30" selected>30</option>
+                                <option value="60">60</option>
+                                <option value="100">100</option>
+                                <option value="150">150</option>
+                                <option value="300">300</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-column">
+		
+		    <section id="config-box" class="section" style="display: none";>
+                <h3>Configurazioni</h3>
+				<label>
+                    Giornata Lavorativa
+                    <span class="tooltip-container">
+                        ⓘ
+                        <span class="tooltip-text">
+                            Imposta l'orario contrattuale comprensivo di pausa pranzo. 							 
+                            Verrà usato per calcolare l'uscita teorica giornaliera relativa all'orario di entrata 
+							e la differenza oraria giornaliera rispetto all'orario di uscita effettiva.
+							Per default è impostato l'orario Almaviva S.p.A. (8h 06m).
+                        </span>
+                    </span>
+                </label>
+                <select id="filter-ore-lavoro" class="value" style="margin-bottom:20px;">
+                    <option value="">--- ore ---</option>
+                </select>
+				<select id="filter-minuti-lavoro" class="value" style="margin-bottom:20px;">
+                    <option value="">--- minuti ---</option>
+                </select>
+				<label>
+                    Rientri Mensili
+                    <span class="tooltip-container">
+                        ⓘ
+                        <span class="tooltip-text">
+                            Indica il numero minimo di rientri in sede previsti dalla normativa aziendale.
+							Per default è impostato il numero dei rientri previsto dalla normativa Almaviva S.p.A. (4).
+                        </span>
+                    </span>
+                </label>
+				<select id="filter-rientri-mensili" class="value" style="margin-bottom:20px;">
+                    <option value="">--- giornate ---</option>
+                </select>
+				<button class="btn btn-danger" id="btn-chiudi-config" style="width:100%;">CHIUDI</button>
+			</section>	
+			
+            <section class="section">
+                <h3>Tabella</h3>
+                <button class="btn btn-secondary" id="btn-mese-corrente" style="width:100%; margin-bottom:10px;">MESE CORRENTE</button>
+                <button class="btn btn-secondary" id="btn-anno-corrente" style="width:100%; margin-bottom:10px;">ANNO CORRENTE</button>
+                <button class="btn btn-danger" id="btn-elimina-tutto" style="width:100%;">ELIMINA TUTTO</button>
+            </section>
+            
+            <section class="section">
+                <h3>Filtro</h3>
+                <label>Mese <span id="badge-mese" class="chip info" style="display:none; font-size:0.6rem; padding:2px 5px; margin-left:5px;">AUTO</span></label>
+                <select id="filter-mese" class="form-select" style="margin-bottom:10px;">
+                    <option value="">— tutti i mesi —</option>
+                    <option value="01">Gennaio</option>
+                    <option value="02">Febbraio</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Aprile</option>
+                    <option value="05">Maggio</option>
+                    <option value="06">Giugno</option>
+                    <option value="07">Luglio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Settembre</option>
+                    <option value="10">Ottobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Dicembre</option>
+                </select>
+                <label>Anno <span id="badge-anno" class="chip info" style="display:none; font-size:0.6rem; padding:2px 5px; margin-left:5px;">AUTO</span></label>
+                <select id="filter-anno" class="form-select" style="margin-bottom:10px;">
+                    <option value="">— tutti gli anni —</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                </select>
+                <label>Sede</label>
+                <select id="filter-sede-select" class="form-select" style="margin-bottom:10px;">
+                    <option value="">Tutte le sedi</option>
+					<option value="Assenza">Assenza</option>
+					<option value="Fuori Sede">Fuori Sede</option>
+                    <option value="In Sede">In Sede</option>
+                    <option value="Smart Working">Smart Working</option>                                       
+                </select>
+                <label>Cerca nelle note</label>
+                <input type="text" id="filter-note" class="form-control" placeholder="Es: Permesso..." style="margin-bottom:10px;">
+                <button id="btn-reset-filtri-avanzati" class="btn btn-outline-secondary" style="width:100%;">RESET FILTRI</button>
+            </section>
+
+            <section class="section">
+                <h3>Backup & Archivio</h3>
+                <label>Backup</label>
+                <select id="backup-select" style="margin-bottom:10px;"><option value="">-- seleziona --</option></select>
+                <button class="btn btn-secondary" id="restore-backup" style="width:100%;">RIPRISTINA</button>
+                <hr style="margin: 15px 0; opacity: 0.2;">
+                <label>Archivio</label>
+                <select id="archive-select" style="margin-bottom:10px;"><option value="">-- seleziona --</option></select>
+                <button class="btn btn-secondary" id="carica-archivio" style="width:100%;">CARICA</button>
+            </section>
+        </aside>
+    </div>
+
+    <script>
+	
+	    const selectMinuti = document.getElementById('filter-minuti-lavoro');
+
+        for (let i = 0; i <= 59; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = i.toString().padStart(2, '0');
+            if (i === 6) opt.selected = true; // Imposta 06 come default
+            selectMinuti.appendChild(opt);
+        }
+		
+ 		selectMinuti.onchange = () => { 
+            refreshUI(); 
+            document.getElementById('entrata').dispatchEvent(new Event('change'));
+        };
+		
+		const selectOre = document.getElementById('filter-ore-lavoro');
+
+        for (let i = 0; i <= 10; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = i.toString().padStart(2, '0');
+            if (i === 8) opt.selected = true; // Imposta 08 come default
+            selectOre.appendChild(opt);
+        }
+		
+		selectOre.onchange = () => { 
+            refreshUI(); 
+            document.getElementById('entrata').dispatchEvent(new Event('change')); 
+        };
+		
+		const selectRientri = document.getElementById('filter-rientri-mensili');
+
+        for (let i = 0; i <= 10; i++) {
+            const opt = document.createElement('option');
+            opt.value = i;
+            opt.textContent = i.toString();
+			if (i === 4) opt.selected = true;
+            selectRientri.appendChild(opt);
+        }
+		
+		selectRientri.onchange = () => { refreshUI(); };
+		
+		document.getElementById('btn-manuale').onclick = () => {
+            window.location.href = '/download-manuale';
+        };
+		
+		document.addEventListener('DOMContentLoaded', function() {
+            const btnConfig = document.getElementById('btn-config'); 
+            const btnCloseConfig = document.getElementById('btn-chiudi-config');
+			const btnApplicaConfig = document.getElementById('btn-applica-config');
+            const configBox = document.getElementById('config-box');
+        
+            // Mostra il box al click su Configura
+            if (btnConfig) {
+                btnConfig.addEventListener('click', () => {
+                    configBox.style.display = 'block';
+                });
+            }
+			
+			// Applica modifiche
+            if (btnApplicaConfig) {
+                btnApplicaConfig.addEventListener('click', () => {
+				    // applica le modifiche 
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        
+            // Nasconde il box al click su Chiudi
+            if (btnCloseConfig) {
+                btnCloseConfig.addEventListener('click', () => {
+                    configBox.style.display = 'none';
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+		
+        let currentPage = 1;
+        let pageSize = 30;
+        let orderedRecords = [];
+        let records = [];
+        let filterMode = 'mese';
+        const WORKDAY_MIN = 486;
+
+        const pad = n => String(n).padStart(2, '0');
+        const toMin = s => { if(!s || !s.includes(':')) return null; const [h,m]=s.split(':').map(Number); return h*60+m; };
+        const fromMin = m => { const abs=Math.abs(m); return (m<0?'-':'')+pad(Math.floor(abs/60))+':'+pad(abs%60); };
+         
+		// Calcola i minuti totali di lavoro basandosi sulle select Ore e Minuti
+        const getWorkdayMin = () => {
+            const ore = parseInt(document.getElementById('filter-ore-lavoro').value) || 0;
+            const minuti = parseInt(document.getElementById('filter-minuti-lavoro').value) || 0;
+            return (ore * 60) + minuti;
+        };
+		
+        let currentSortCol = 'date';
+        let sortAsc = false;
+
+        async function init() {
+            const now = new Date();
+            filterMode = 'mese'; 
+            document.getElementById('filter-mese').value = pad(now.getMonth() + 1);
+            document.getElementById('filter-anno').value = String(now.getFullYear());
+            document.getElementById('filter-note').oninput = () => { currentPage = 1; refreshUI(); };
+            await loadInitialData(); 
+            updateHeaderLabels();
+            updateFilterInteractivity();
+            refreshUI(); 
+            document.getElementById('theme-toggle').innerHTML = "☀️ Light Mode";
+            setInterval(updateClock, 1000);
+        }
+
+        function sortBy(col) {
+            if (currentSortCol === col) {
+                sortAsc = !sortAsc;
+            } else {
+                currentSortCol = col;
+                sortAsc = (col === 'date') ? false : true;
+            }
+            updateSortIcons();
+            refreshUI();
+        }
+
+        function updateSortIcons() {
+            const headers = {
+                'date': 'th-date',
+                'sede': 'th-sede',
+                'entrata': 'th-entrata',
+                'uscita': 'th-uscita',
+                'presenza': 'th-presenza',
+                'uscita_teorica': 'th-uscita-prev',     
+                'diff': 'th-diff'
+            };
+            for (let key in headers) {
+                const el = document.getElementById(headers[key]);
+                if (el) {
+                    if (key === currentSortCol) {
+                        el.innerHTML = el.getAttribute('data-label') + (sortAsc ? ' ↑' : ' ↓');
+                        el.classList.add('active-sort');
+                    } else {
+                        el.innerHTML = el.getAttribute('data-label') + ' ↕';
+                        el.classList.remove('active-sort');
+                    }
+                }
+            }
+        }
+
+        function updateSummaryCounters() {
+        let minutiPresenzaTotali = 0;
+        let minutiDifferenzaTotale = 0;
+        let r_c = 0, s_c = 0, a_c = 0;
+       
+        // Recuperiamo l'orario di lavoro impostato (es. 8h 06m = 486 min)
+        const workdayMin = getWorkdayMin(); 
+       
+        if (Array.isArray(orderedRecords)) {
+            orderedRecords.forEach(r => {
+                const e = toMin(r.entrata);
+                const u = toMin(r.uscita);
+       
+                if (r.sede !== 'Assenza' && e !== null) {
+                    // 1. Calcolo Presenza Effettiva
+                    if (u !== null) {
+                        minutiPresenzaTotali += (u - e);
+                    }
+       
+                    // 2. Calcolo Differenza Dinamica
+                    // Usiamo la logica: base 08:00 (480 min) + orario lavorativo configurato
+                    const baseMin = e < 480 ? 480 : e;
+                    const utDinamica = baseMin + workdayMin;
+       
+                    if (u !== null) {
+                        minutiDifferenzaTotale += (u - utDinamica);
+                    }
+                }
+       
+                // Conteggi sedi
+                if(r.sede === 'In Sede' || r.sede === 'Fuori Sede') r_c++;
+                if(r.sede === 'Smart Working') s_c++;
+                if(r.sede === 'Assenza') a_c++;
+            });
+        }
+
+            // Aggiornamento UI
+            document.getElementById('tot-giornate').textContent = orderedRecords.length;
+            document.getElementById('ore-presenza').textContent = fromMin(minutiPresenzaTotali);
+            
+            const elDiff = document.getElementById('diff-totale');
+            elDiff.textContent = fromMin(minutiDifferenzaTotale);
+            
+            // Gestione colore (rosso se negativo, verde/standard se positivo)
+            elDiff.classList.toggle('summary-danger', minutiDifferenzaTotale < 0);
+        
+            const obiettivoRientri = parseInt(document.getElementById('filter-rientri-mensili').value) || 4;
+            const elRientri = document.getElementById('rientri');
+            elRientri.textContent = `${r_c}/${obiettivoRientri}`;
+            elRientri.classList.toggle('summary-danger', r_c < obiettivoRientri);
+            
+            document.getElementById('smart-count').textContent = s_c;
+            document.getElementById('assenze-count').textContent = a_c;
+        }
+
+        function updateFilterInteractivity() {
+            const filterMese = document.getElementById('filter-mese');
+            const filterAnno = document.getElementById('filter-anno');
+            const badgeMese = document.getElementById('badge-mese');
+            const badgeAnno = document.getElementById('badge-anno');
+            const now = new Date();
+            filterMese.disabled = false;
+            filterAnno.disabled = false;
+            badgeMese.style.display = "none";
+            badgeAnno.style.display = "none";
+            if (filterMode === 'mese') {
+                filterMese.value = pad(now.getMonth() + 1);
+                filterAnno.value = String(now.getFullYear());
+                filterMese.disabled = true;
+                filterAnno.disabled = true;
+                badgeMese.textContent = "AUTO";
+                badgeMese.style.display = "inline-flex";
+                badgeAnno.textContent = "AUTO";
+                badgeAnno.style.display = "inline-flex";
+            } else if (filterMode === 'anno') {
+                filterAnno.value = String(now.getFullYear());
+                filterAnno.disabled = true;
+                badgeAnno.textContent = "AUTO";
+                badgeAnno.style.display = "inline-flex";
+            } else if (filterMode === 'archivio') {
+                filterAnno.value = document.getElementById('anno-label').textContent;
+                filterAnno.disabled = true;
+                badgeAnno.textContent = "STORICO";
+                badgeAnno.className = "chip warn";
+                badgeAnno.style.display = "inline-flex";
+            }
+        }
+
+        async function loadInitialData() {
+            try {
+                const r = await fetch('/records').then(res => res.json());
+                records = Array.isArray(r) ? r : [];
+                const backups = await fetch('/backups').then(res => res.json()).catch(()=>[]);
+                const bSel = document.getElementById('backup-select');
+                bSel.innerHTML = '<option value="">-- seleziona --</option>';
+                backups.forEach(f => bSel.add(new Option(f, f)));
+                const archives = await fetch('/archives').then(res => res.json()).catch(()=>[]);
+                const aSel = document.getElementById('archive-select');
+                aSel.innerHTML = '<option value="">-- seleziona --</option>';
+                archives.forEach(f => aSel.add(new Option(f, f)));
+                refreshUI();
+            } catch (e) { console.error(e); }
+        }
+
+        function refreshUI() {
+            const selectedMese = document.getElementById('filter-mese').value;
+            const selectedAnno = document.getElementById('filter-anno').value;
+            const sedeFiltro = document.getElementById('filter-sede-select').value;
+            const noteFiltro = document.getElementById('filter-note').value.toLowerCase();
+            let filtered = [...records];
+            if (selectedAnno) filtered = filtered.filter(r => r.date.startsWith(selectedAnno));
+            if (selectedMese) filtered = filtered.filter(r => r.date.split('-')[1] === selectedMese);
+            if (sedeFiltro) filtered = filtered.filter(r => r.sede === sedeFiltro);
+            if (noteFiltro) filtered = filtered.filter(r => String(r.note || "").toLowerCase().includes(noteFiltro));
+            filtered.sort((a, b) => {
+                let valA, valB;
+                if (currentSortCol === 'diff') {
+                    const getMin = (r) => (r.sede === 'Assenza') ? (sortAsc ? 999999 : -999999) : (toMin(r.uscita) - toMin(r.uscita_teorica)) || 0;
+                    valA = getMin(a); valB = getMin(b);
+                } else if (currentSortCol === 'presenza') {
+                    const getPres = (r) => (r.sede === 'Assenza') ? null : (toMin(r.uscita) - toMin(r.entrata));
+                    valA = getPres(a); valB = getPres(b);
+                    if (valA === null && valB === null) return 0;
+                    if (valA === null) return 1;
+                    if (valB === null) return -1;
+                } else {
+                    valA = a[currentSortCol] || "";
+                    valB = b[currentSortCol] || "";
+                }
+                if (valA < valB) return sortAsc ? -1 : 1;
+                if (valA > valB) return sortAsc ? 1 : -1;
+                return 0;
+            });
+            orderedRecords = filtered;
+            updateTableDisplay();
+        }
+
+        document.getElementById('filter-mese').onchange = () => { currentPage = 1; refreshUI(); };
+        document.getElementById('filter-anno').onchange = () => { currentPage = 1; refreshUI(); };
+        document.getElementById('filter-sede-select').onchange = () => { currentPage = 1; refreshUI(); };
+
+        document.getElementById('btn-reset-filtri-avanzati').onclick = () => {
+            const now = new Date();
+            document.getElementById('filter-sede-select').value = "";
+            document.getElementById('filter-note').value = "";
+            if (filterMode === 'mese') {
+                document.getElementById('filter-mese').value = pad(now.getMonth() + 1);
+                document.getElementById('filter-anno').value = String(now.getFullYear());
+            } else if (filterMode === 'anno') {
+                document.getElementById('filter-mese').value = "";
+                document.getElementById('filter-anno').value = String(now.getFullYear());
+            } else if (filterMode === 'archivio') {
+                document.getElementById('filter-mese').value = ""; 
+                document.getElementById('filter-anno').value = document.getElementById('anno-label').textContent.trim();
+            }
+            currentPage = 1;
+            refreshUI();
+        };
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tbody');
+            if (!tbody) return;
+            let rowsHtml = '';
+			
+			const workdayMin = getWorkdayMin();
+			
+            data.forEach(r => {
+                const dateObj = new Date(r.date);
+                const dayOfWeek = dateObj.getDay();
+                const year = dateObj.getFullYear();
+                const monthDay = r.date.substring(5);
+                const fisse = ["01-01", "01-06", "04-25", "05-01", "06-02", "06-29", "08-15", "10-04", "11-01", "12-08", "12-25", "12-26"];
+                const pasquaObj = getPasqua(year);
+                const pasquettaObj = new Date(pasquaObj);
+                pasquettaObj.setDate(pasquaObj.getDate() + 1);
+                const isWeekend = (dayOfWeek === 0 || dayOfWeek === 6);
+                const isFissa = fisse.includes(monthDay);
+                const isEaster = (dateObj.toDateString() === pasquaObj.toDateString() || dateObj.toDateString() === pasquettaObj.toDateString());
+                const rowClass = (isWeekend || isFissa || isEaster) ? 'class="row-holiday"' : '';
+                const u = toMin(r.uscita), e = toMin(r.entrata);
+                let dStr = "-", pres = "-"; uscitaTeoricaDinamica = "-";
+				
+				if (e !== null && r.sede !== 'Assenza') {
+                    const baseMin = e < 480 ? 480 : e; // Soglia 08:00
+                    const utMin = baseMin + workdayMin;
+                    uscitaTeoricaDinamica = fromMin(utMin);
+                    
+                    // Calcolo Differenza basato sull'uscita teorica appena calcolata
+                    if (u !== null) {
+                        dStr = fromMin(u - utMin);
+                        pres = fromMin(u - e);
+                    }
+                }
+				
+                let entrataDisplay = r.entrata || '-';
+                if (r.entrata && e !== null && e < 480) {
+                    entrataDisplay = `${r.entrata} <span style="color: var(--primary); font-size: 0.9em; font-weight: bold;">(08:00)*</span>`;
+                }
+                
+                rowsHtml += `
+                    <tr ${rowClass}>
+                        <td>${r.date.split('-').reverse().join('-')}</td>
+                        <td>${r.sede || '-'}</td>
+                        <td>${entrataDisplay}</td>
+                        <td>${r.uscita || '-'}</td>
+                        <td class="${(pres.startsWith('-') && pres.length > 1) ? 'summary-danger' : ''}">${pres}</td>
+                        <td>${uscitaTeoricaDinamica}</td>
+                        <td class="${(dStr.startsWith('-') && dStr.length > 1) ? 'summary-danger' : ''}">${dStr}</td>
+                        <td>${r.note || '-'}</td>
+                        <td>
+                            <button class="btn btn-secondary btn-sm" onclick="editRow('${r.date}')">Modifica</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteRow('${r.date}')">Elimina</button>
+                        </td>
+                    </tr>`;
+            });
+            tbody.innerHTML = rowsHtml;
+        }
+
+        function getPasqua(y) {
+            const a = y % 19, b = Math.floor(y / 100), c = y % 100,
+                  d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25),
+                  g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30,
+                  i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7,
+                  m = Math.floor((a + 11 * h + 22 * l) / 451);
+            const month = Math.floor((h + l - 7 * m + 114) / 31);
+            const day = ((h + l - 7 * m + 114) % 31) + 1;
+            return new Date(y, month - 1, day);
+        }
+
+        document.getElementById('btn-salva').onclick = async () => {
+            const rec = {
+                date: document.getElementById('data').value,
+                entrata: document.getElementById('entrata').value,
+                sede: document.getElementById('sede').value,
+                uscita: document.getElementById('uscita').value,
+                note: document.getElementById('note').value
+            };
+            if(!rec.date) return alert("Data mancante");
+            await fetch('/save', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(rec)});
+            resetForm(); await loadInitialData();
+        };
+
+        document.getElementById('btn-elimina-tutto').onclick = async () => {
+            if(confirm("⚠ CANCELLARE TUTTO?")){
+                await fetch('/delete-all', { method:'DELETE' });
+                records = []; renderTable([]); alert("Fatto!");
+            }
+        };
+
+        document.getElementById('restore-backup').onclick = async () => {
+            const filename = document.getElementById('backup-select').value;
+            if(!filename) return alert("Scegli un backup");
+            if (confirm("Ripristinare questo backup?")) {
+                const res = await fetch('/restore', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ filename }) }).then(r => r.json());
+                if(res.success) { await loadInitialData(); }
+            }
+        };
+
+        document.getElementById('carica-archivio').onclick = async () => {
+            const filename = document.getElementById('archive-select').value;
+            if (!filename) return alert("Scegli un archivio");
+            try {
+                const response = await fetch(`/archive/${encodeURIComponent(filename)}`);
+                const data = await response.json();
+                if (Array.isArray(data)) {
+                    records = data; filterMode = 'archivio'; currentPage = 1;
+                    const yearMatch = filename.match(/\d{4}/);
+                    const displayYear = yearMatch ? yearMatch[0] : "Archivio";
+                    document.getElementById('filter-anno').value = displayYear;
+                    document.getElementById('filter-mese').value = "";
+                    updateHeaderLabels(displayYear); updateFilterInteractivity(); refreshUI();
+                }
+            } catch (e) { console.error(e); }
+        };
+
+        document.getElementById('theme-toggle').onclick = function() {
+            const isDark = document.body.classList.toggle('dark-mode');
+            this.innerHTML = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+        };
+
+        window.editRow = (d) => {
+            const r = records.find(x => x.date === d);
+            if(r){
+                document.getElementById('data').value = r.date || '';
+                document.getElementById('sede').value = r.sede || '';
+                document.getElementById('entrata').value = r.entrata || '';
+                document.getElementById('uscita').value = r.uscita || '';
+                document.getElementById('note').value = r.note || '';
+				
+				if (r.entrata) {
+                    const s = toMin(r.entrata);
+                    const baseMin = s < 480 ? 480 : s;
+                    document.getElementById('uscita-teorica').value = fromMin(baseMin + getWorkdayMin());
+                } else {
+                    document.getElementById('uscita-teorica').value = '';
+                }
+				
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        window.deleteRow = async (d) => {
+            if (!confirm(`Eliminare record del ${d.split('-').reverse().join('-')}?`)) return;
+            try {
+                const res = await fetch(`/delete/${encodeURIComponent(d)}`, { method: 'DELETE' }).then(r => r.json());
+                if (res.success) await loadInitialData();
+            } catch (e) { console.error(e); }
+        };
+
+        function updateHeaderLabels(customYear = null) {
+            const mesi = ["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+            const now = new Date();
+            document.getElementById('mese-label').textContent = (filterMode === 'mese') ? mesi[now.getMonth()] : "Tutto";
+            document.getElementById('anno-label').textContent = customYear || now.getFullYear();
+        }
+
+        function updateClock() {
+            const n = new Date();
+            document.getElementById('date-display').textContent = n.toLocaleDateString('it-IT', {weekday:'long', day:'numeric', month:'long'});
+            document.getElementById('time-display').textContent = n.toLocaleTimeString('it-IT', {hour:'2-digit', minute:'2-digit'});
+        }
+
+        document.getElementById('btn-mese-corrente').onclick = async () => {
+            const now = new Date(); filterMode = 'mese';
+            document.getElementById('filter-mese').value = pad(now.getMonth() + 1);
+            document.getElementById('filter-anno').value = String(now.getFullYear());
+            await loadInitialData(); updateHeaderLabels(); updateFilterInteractivity();
+        };
+
+        document.getElementById('btn-anno-corrente').onclick = async () => {
+            const now = new Date(); filterMode = 'anno';
+            document.getElementById('filter-mese').value = "";
+            document.getElementById('filter-anno').value = String(now.getFullYear());
+            await loadInitialData(); updateHeaderLabels(); updateFilterInteractivity();
+        };
+
+        document.getElementById('entrata').onchange = (e) => {
+            const s = toMin(e.target.value); 
+            if(!s) return;
+            const baseMin = s < 480 ? 480 : s; // Gestione soglia 08:00
+            
+            // Usiamo getWorkdayMin() invece della vecchia costante
+            document.getElementById('uscita-teorica').value = fromMin(baseMin + getWorkdayMin());
+        };
+
+        function resetForm() { document.querySelectorAll('.form-grid input').forEach(i => i.value = ''); document.getElementById('sede').value = ''; }
+        document.getElementById('btn-ripristina-form').onclick = resetForm;
+
+        document.getElementById('exit-page').onclick = () => {
+            if (confirm("Uscire?")) {
+                document.body.innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:var(--bg);color:var(--text);"><h1>Applicazione Chiusa</h1><button onclick="location.reload()" class="btn btn-secondary">Rientra</button></div>';
+            }
+        };
+
+        document.getElementById('export-csv').onclick = () => {
+            if (!orderedRecords.length) return alert("Nulla da esportare.");
+        
+            // Intestazione CSV (Data; Sede; Entrata; Uscita; Presenza; Uscita Teorica; Differenza; Note)
+            let csv = "Data;Sede;Entrata;Uscita;Presenza (h);Uscita Teorica;Differenza (h);Note\n";
+            
+            // Recuperiamo i minuti della giornata lavorativa configurata (es. 486 per 8h 06m)
+            const workdayMin = getWorkdayMin();
+        
+            orderedRecords.forEach(r => {
+                const e = toMin(r.entrata);
+                const u = toMin(r.uscita);
+                
+                let dStr = "***";      // Differenza
+                let pres = "***";      // Presenza effettiva
+                let utDinamica = "***"; // Uscita Teorica calcolata run-time
+        
+                // Calcolo logica dinamica se non è un'assenza e c'è l'orario di entrata
+                if (r.sede !== 'Assenza' && e !== null) {
+                    // 1. Uscita Teorica: soglia 08:00 (480 min) + giornata lavorativa
+                    const baseMin = e < 480 ? 480 : e;
+                    const utMin = baseMin + workdayMin;
+                    utDinamica = fromMin(utMin);
+        
+                    // 2. Presenza Effettiva (Uscita - Entrata reale)
+                    if (u !== null) {
+                        pres = fromMin(u - e);
+                        // 3. Differenza (Uscita reale - Uscita Teorica)
+                        dStr = fromMin(u - utMin);
+                    }
+                }
+        
+                // Creazione riga CSV
+                const row = [
+                    r.date.split('-').reverse().join('-'),          // Data
+                    r.sede || '***',                                // Sede
+                    r.entrata || '***',                             // Entrata
+                    r.uscita || '***',                              // Uscita
+                    pres,                                           // Presenza (h)
+                    utDinamica,                                     // Uscita Teorica (AUTO)
+                    dStr,                                           // Differenza (h)
+                    (r.note || '').replace(/;/g, ',')               // Note (evitiamo conflitti con il separatore ;)
+                ];
+        
+                csv += row.join(';') + "\n";
+            });
+        
+            // Generazione del file con BOM per corretta lettura accenti in Excel
+            const blob = new Blob(["\ufeff" + csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = `Export_Registro_${new Date().toISOString().split('T')[0]}.csv`;
+            link.click();
+        };
+
+        function totalPages() { return Math.max(1, Math.ceil(orderedRecords.length / pageSize)); }
+        function clampPage(p) { const tp = totalPages(); return Math.min(Math.max(1, p), tp); }
+        function getPaginatedData() { const start = (currentPage - 1) * pageSize; return orderedRecords.slice(start, start + pageSize); }
+
+        function renderPager() {
+            const tp = totalPages();
+            currentPage = clampPage(currentPage);
+            const btns = document.getElementById('page-buttons');
+            btns.innerHTML = '';
+            let pages = tp <= 5 ? Array.from({ length: tp }, (_, i) => i + 1) : (currentPage <= 3 ? [1, 2, 3, '...', tp] : (currentPage >= tp - 2 ? [1, '...', tp - 2, tp - 1, tp] : [1, '...', currentPage, '...', tp]));
+            pages.forEach(p => {
+                if (p === '...') {
+                    const span = document.createElement('span'); span.textContent = '...'; span.className = 'px-2 align-self-center'; btns.appendChild(span);
+                } else {
+                    const b = document.createElement('button');
+                    b.className = p === currentPage ? 'btn btn-primary btn-sm' : 'btn btn-outline-secondary btn-sm';
+                    b.textContent = p; b.style.minWidth = "35px";
+                    b.onclick = () => { currentPage = p; updateTableDisplay(); };
+                    btns.appendChild(b);
+                }
+            });
+            document.getElementById('first-page').disabled = currentPage === 1;
+            document.getElementById('prev-page').disabled = currentPage === 1;
+            document.getElementById('next-page').disabled = currentPage === tp;
+            document.getElementById('last-page').disabled = currentPage === tp;
+            document.getElementById('page-info').textContent = `Pagina ${currentPage} di ${tp} (${orderedRecords.length} totali)`;
+        }
+
+        function updateTableDisplay() {
+            currentPage = clampPage(currentPage);
+            renderTable(getPaginatedData());
+            renderPager();
+            renderViewStatus();
+            updateSummaryCounters();
+        }
+
+        document.getElementById('first-page').onclick = () => { currentPage = 1; updateTableDisplay(); };
+        document.getElementById('last-page').onclick = () => { currentPage = totalPages(); updateTableDisplay(); };
+        document.getElementById('prev-page').onclick = () => { currentPage--; updateTableDisplay(); };
+        document.getElementById('next-page').onclick = () => { currentPage++; updateTableDisplay(); };
+        document.getElementById('page-size').onchange = (e) => { pageSize = parseInt(e.target.value); currentPage = 1; updateTableDisplay(); };
+
+        function renderViewStatus() {
+            const chipOrigin = document.getElementById('chip-origin');
+            document.getElementById('status-origin').textContent = filterMode === 'archivio' ? "Archivio Storico" : "Database Locale";
+            chipOrigin.className = filterMode === 'archivio' ? "chip warn" : "chip info";
+            document.getElementById('status-view').textContent = filterMode.toUpperCase();
+            let active = [];
+            if (document.getElementById('filter-mese').value && !document.getElementById('filter-mese').disabled) active.push("Mese: " + document.getElementById('filter-mese').value);
+            if (document.getElementById('filter-sede-select').value) active.push(document.getElementById('filter-sede-select').value);
+            if (document.getElementById('filter-note').value.trim()) active.push(`"${document.getElementById('filter-note').value.trim()}"`);
+            document.getElementById('status-filters').textContent = active.length ? active.join(' + ') : "Nessun filtro";
+            const total = orderedRecords.length;
+            document.getElementById('status-counts').textContent = total ? `${(currentPage - 1) * pageSize + 1}-${Math.min(currentPage * pageSize, total)} di ${total}` : "0 di 0";
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

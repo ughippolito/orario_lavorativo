@@ -1,0 +1,8 @@
+mirrors:
+  docker.io:
+    endpoint:
+      - "https://registry-1.docker.io"
+configs:
+  "registry-1.docker.io":
+    tls:
+      insecure_skip_verify: true

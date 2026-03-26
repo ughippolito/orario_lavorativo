@@ -1,0 +1,39 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: orario-cluster
+
+image: rancher/k3s:v1.34.3-k3s1
+
+servers: 1
+agents: 2
+
+network: k3d-orario-net
+
+ports:
+  - port: 80:80
+    nodeFilters:
+      - server:*
+  - port: 443:443
+    nodeFilters:
+      - server:*
+  - port: 8443:443
+    nodeFilters:      
+      - loadbalancer
+volumes:
+  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/init.yaml:/var/lib/rancher/k3s/server/manifests/init.yaml
+    nodeFilters:
+      - server:*
+  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/dashboard.yaml:/var/lib/rancher/k3s/server/manifests/dashboard.yaml
+    nodeFilters:
+      - server:*
+  - volume: /home/ugo/progetti/orario_lavorativo/data:/mnt/data/workhours
+    nodeFilters:
+      - all
+  - volume: /home/ugo/progetti/orario_lavorativo/manuale:/mnt/data/manuale
+    nodeFilters:
+      - all    
+  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/registries.yaml:/etc/rancher/k3s/registries.yaml
+    nodeFilters:
+      - server:*
+      - agent:*

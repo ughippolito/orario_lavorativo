@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: gestione-orario
+  name: workhours-frontend
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  selector:
+    app: workhours-frontend # Deve corrispondere a spec.template.metadata.labels nel Deployment
+  type: ClusterIP # Per l'Ingress basta ClusterIP, non serve NodePort

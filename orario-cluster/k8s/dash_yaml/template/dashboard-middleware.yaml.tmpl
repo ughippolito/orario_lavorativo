@@ -1,0 +1,9 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: dashboard-auth
+  namespace: kubernetes-dashboard
+spec:
+  headers:
+    customRequestHeaders:
+      Authorization: "Bearer TOKEN_DA_SOSTITUIRE"
