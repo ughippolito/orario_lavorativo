@@ -21,19 +21,19 @@ ports:
     nodeFilters:      
       - loadbalancer
 volumes:
-  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/init.yaml:/var/lib/rancher/k3s/server/manifests/init.yaml
+  - volume: $INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/config_yaml/init.yaml:/var/lib/rancher/k3s/server/manifests/init.yaml
     nodeFilters:
       - server:*
-  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/dashboard.yaml:/var/lib/rancher/k3s/server/manifests/dashboard.yaml
+  - volume: $INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/config_yaml/dashboard.yaml:/var/lib/rancher/k3s/server/manifests/dashboard.yaml
     nodeFilters:
       - server:*
-  - volume: /home/ugo/progetti/orario_lavorativo/data:/mnt/data/workhours
+  - volume: $INSTALL_DIR/orario_lavorativo/data:/mnt/data/workhours
     nodeFilters:
       - all
-  - volume: /home/ugo/progetti/orario_lavorativo/manuale:/mnt/data/manuale
+  - volume: $INSTALL_DIR/orario_lavorativo/manuale:/mnt/data/manuale
     nodeFilters:
       - all    
-  - volume: /home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml/registries.yaml:/etc/rancher/k3s/registries.yaml
+  - volume: $INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/config_yaml/registries.yaml:/etc/rancher/k3s/registries.yaml
     nodeFilters:
       - server:*
       - agent:*

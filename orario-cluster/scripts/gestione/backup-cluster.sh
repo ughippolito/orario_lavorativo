@@ -1,9 +1,9 @@
 #! /bin/bash
 
 DATE=$(date +%Y%m%d%H%M)
-BACKUPDIR="/home/ugo/progetti/orario_lavorativo/backup/"
+BACKUPDIR="$INSTALL_DIR/orario_lavorativo/backup/"
 BACKUPFILE="cluster_$(date +%Y%m%d_%H%M)"
-BACKUPSCRIPT="/home/ugo/progetti/orario_lavorativo/orario-cluster/scripts/servizio/"
+BACKUPSCRIPT="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/servizio/"
 
 mkdir -p "$BACKUPDIR$BACKUPFILE"
 cd $BACKUPDIR$BACKUPFILE

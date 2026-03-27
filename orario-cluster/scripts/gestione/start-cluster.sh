@@ -2,7 +2,7 @@
 set -euo pipefail
 
 CLUSTER_NAME="orario-cluster"
-SCRIPTS_DIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/scripts/gestione"
+SCRIPTS_DIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/gestione"
 FQDN_APP="orario.local"
 FQDN_DASH="dashboard.local"
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SERVIZIODIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/scripts/servizio"
-BACKUPDIR="/home/ugo/progetti/orario_lavorativo/backup/"
+SERVIZIODIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/servizio"
+BACKUPDIR="$INSTALL_DIR/orario_lavorativo/backup/"
 FILENAME="immagine_$(date +%Y%m%d_%H%M)"
 
 mkdir -p "$BACKUPDIR$FILENAME"

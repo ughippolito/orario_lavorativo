@@ -2,7 +2,7 @@
 set -euo pipefail
 
 CLUSTER_NAME="${CLUSTER_NAME:-orario-cluster}"
-SCRIPTDIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/scripts/gestione"
+SCRIPTDIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/gestione"
 
 echo ""
 echo "==== Arresto controllato del cluster k3d: ${CLUSTER_NAME} ===="

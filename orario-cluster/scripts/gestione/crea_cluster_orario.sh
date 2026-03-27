@@ -2,10 +2,10 @@
 set -euo pipefail
 
 CLUSTER_NAME="orario-cluster"
-K3D_CONFIG="/home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/config_yaml"
-K8S_DASH_DIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/dash_yaml"
-K8S_APP_DIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/appl_yaml"
-SCRIPTS_DIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/scripts/servizio"
+K3D_CONFIG="$INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/config_yaml"
+K8S_DASH_DIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/dash_yaml"
+K8S_APP_DIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/appl_yaml"
+SCRIPTS_DIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/servizio"
 NAMESPACE="gestione-orario"
 FQDN_APP="orario.local"
 FQDN_DASH="dashboard.local"

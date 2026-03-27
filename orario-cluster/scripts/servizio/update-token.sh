@@ -1,6 +1,6 @@
 #!/bin/bash
 
-K8S_DASH_DIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/dash_yaml"
+K8S_DASH_DIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/dash_yaml"
 
 # 1. Recupera il token dal Secret statico (già decodificato)
 NEW_TOKEN=$(kubectl -n kubernetes-dashboard get secret admin-user-token -o jsonpath={".data.token"} | base64 -d)

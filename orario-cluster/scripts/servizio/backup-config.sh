@@ -1,6 +1,6 @@
 #! /bin/bash
 
-WORKDIR="/home/ugo/progetti/orario_lavorativo/orario-cluster/"
+WORKDIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/"
 
 rsync -av "$WORKDIR/k8s" . > /dev/null 2>&1
 echo "Backup Configurazioni effettuato"

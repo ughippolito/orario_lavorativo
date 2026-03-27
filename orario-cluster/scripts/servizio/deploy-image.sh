@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 DEPLOYMENT_NAME="workhours-frontend"
-DEPLOYMENT_YAML="/home/ugo/progetti/orario_lavorativo/orario-cluster/k8s/appl_yaml/02_orario-deployment.yaml"
+DEPLOYMENT_YAML="$INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/appl_yaml/02_orario-deployment.yaml"
 FQDN="orario.local"
 NAMESPACE="gestione-orario"
 
