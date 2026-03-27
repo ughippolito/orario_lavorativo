@@ -1,0 +1,22 @@
+# Installa docker
+sudo apt update
+sudo apt install docker.io -y
+#Assicurati che l'utente abbia i permessi per utilizzare docker
+
+# Installa k3d
+curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.8.3 bash
+
+# Installa kubectl
+sudo snap install kubectl --classic
+
+#Scarica il Progetto
+Apri il terminale sul PC e scarica:
+
+git clone https://github.com/ughippolito/orario_lavorativo.git
+cd orario-lavorativo
+
+#Lancio del Cluster
+chmod +x orario-cluster/scripts/gestione/crea_cluster_orario.sh
+./orario-cluster/scripts/gestione/crea_cluster_orario.sh
+
+#Infine, aggiungi il dominio locale nel file /etc/hosts del nuovo PC
