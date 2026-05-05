@@ -744,8 +744,15 @@
             const rientriBaseMensili = parseInt(document.getElementById('filter-rientri-mensili').value) || 4;
             let obiettivoDinamico = rientriBaseMensili;
             const ora = new Date();
-        
-            if (filterMode === 'archivio') {
+            
+            // Nuova logica: se c'è un mese selezionato nel filtro, l'obiettivo è mensile.
+            // Se il mese è vuoto e siamo in modalità "anno", calcola i mesi passati.
+            const meseSelezionato = document.getElementById('filter-mese').value;
+            
+            if (meseSelezionato !== "") {
+                // Se l'utente ha scelto un mese specifico, l'obiettivo è quello di un singolo mese
+                obiettivoDinamico = rientriBaseMensili;
+            } else if (filterMode === 'archivio') {
                 obiettivoDinamico = rientriBaseMensili * 12;
             } else if (filterMode === 'anno') {
                 const mesiPassati = ora.getMonth() + 1;
@@ -753,7 +760,7 @@
             } else {
                 obiettivoDinamico = rientriBaseMensili;
             }
-        
+            
             const elRientri = document.getElementById('rientri');
             elRientri.textContent = `${r_c}/${obiettivoDinamico}`;
             elRientri.classList.toggle('summary-danger', r_c < obiettivoDinamico);
