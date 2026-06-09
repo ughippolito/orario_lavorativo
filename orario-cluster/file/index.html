@@ -220,6 +220,15 @@
             border-bottom: 1px solid var(--border);
             text-align: center;
         }
+		
+		/* Forza il testo delle note ad andare a capo e fissa una larghezza massima */
+        table tbody td:nth-child(8) {
+        max-width: 400px;         /* Imposta la larghezza massima che preferisci */
+        white-space: normal;      /* Permette al testo di andare a capo */
+        word-wrap: break-word;    /* Spezza le parole troppo lunghe (es. link o codici) */
+        text-align: center;         /* Opzionale: rende le note lunghe pi.. leggibili */
+        vertical-align: middle;   /* Allineamento verticale al centro */
+        }
 
         .status-bar {
             display: flex;
@@ -297,7 +306,7 @@
         .tooltip-container:hover .tooltip-text {
             visibility: visible;
             opacity: 1;
-        }
+        }		
     </style>
 </head>
 <body class="dark-mode">
