@@ -51,6 +51,26 @@ spec:
         - name: workhours-frontend
           image: ughippo/gestione-orario:latest
           imagePullPolicy: Always
+          env:
+          # Disabilita il controllo SSL di Git all'interno del container per evitare l'errore del local issuer
+          - name: GIT_SSL_NO_VERIFY
+            value: "true"
+          # Passiamo il token e l'utente presi dal Secret
+          - name: GITHUB_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: github-creds
+                key: token
+          - name: GITHUB_USER
+            valueFrom:
+              secretKeyRef:
+                name: github-creds
+                key: username
+          - name: GITHUB_EMAIL
+            valueFrom:
+              secretKeyRef:
+                name: github-creds
+                key: email  
 
           ports:
             - containerPort: 3000
