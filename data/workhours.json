@@ -1,0 +1,863 @@
+[
+  {
+    "date": "2026-01-20",
+    "entrata": "08:59",
+    "sede": "Smart Working",
+    "uscita": "17:24",
+    "note": ""
+  },
+  {
+    "date": "2026-01-02",
+    "entrata": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-01-05",
+    "entrata": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-01-19",
+    "entrata": "07:56",
+    "sede": "In Sede",
+    "uscita": "16:16",
+    "note": ""
+  },
+  {
+    "date": "2026-01-21",
+    "entrata": "07:53",
+    "sede": "In Sede",
+    "uscita": "16:35",
+    "note": ""
+  },
+  {
+    "date": "2025-11-12",
+    "entrata": "09:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:15",
+    "note": "Red Hat Connection Rome 2025"
+  },
+  {
+    "date": "2026-01-22",
+    "entrata": "08:21",
+    "sede": "Smart Working",
+    "uscita": "16:45",
+    "note": "Assemblea Generale Almaviva * 14:00 - 16:30 *"
+  },
+  {
+    "date": "2026-01-07",
+    "entrata": "08:25",
+    "sede": "Smart Working",
+    "uscita": "16:29",
+    "note": "Cyber Guru Livello 2\" Awareness L2-2 - MODULO MultiFactor Authentication * 1h *"
+  },
+  {
+    "date": "2026-01-08",
+    "entrata": "08:41",
+    "sede": "Smart Working",
+    "uscita": "16:50",
+    "note": ""
+  },
+  {
+    "date": "2026-01-09",
+    "entrata": "08:34",
+    "sede": "Smart Working",
+    "uscita": "16:40",
+    "note": ""
+  },
+  {
+    "date": "2026-01-12",
+    "entrata": "08:42",
+    "sede": "Smart Working",
+    "uscita": "17:27",
+    "note": "ContainerD Introduction"
+  },
+  {
+    "date": "2026-01-13",
+    "entrata": "08:43",
+    "sede": "Smart Working",
+    "uscita": "17:01",
+    "note": "Kubernetes Introduction"
+  },
+  {
+    "date": "2026-01-14",
+    "entrata": "08:59",
+    "sede": "Smart Working",
+    "uscita": "17:08",
+    "note": "Kubernetes Resource Management"
+  },
+  {
+    "date": "2026-01-15",
+    "entrata": "08:50",
+    "sede": "Smart Working",
+    "uscita": "17:11",
+    "note": "Kubernetes Resource Management"
+  },
+  {
+    "date": "2026-01-16",
+    "entrata": "08:43",
+    "sede": "Smart Working",
+    "uscita": "17:50",
+    "note": "Kubernetes Install, Configure & Manage"
+  },
+  {
+    "date": "2026-01-23",
+    "entrata": "08:45",
+    "sede": "Smart Working",
+    "uscita": "16:34",
+    "note": "Cyber Guru Livello 2\" Awareness L2-2 - MODULO IoT - * 1h *"
+  },
+  {
+    "date": "2026-01-26",
+    "entrata": "08:32",
+    "sede": "In Sede",
+    "uscita": "16:34",
+    "note": ""
+  },
+  {
+    "date": "2026-01-27",
+    "entrata": "08:20",
+    "sede": "Smart Working",
+    "uscita": "16:43",
+    "note": ""
+  },
+  {
+    "date": "2026-01-28",
+    "entrata": "08:53",
+    "sede": "In Sede",
+    "uscita": "16:45",
+    "note": ""
+  },
+  {
+    "date": "2026-01-29",
+    "entrata": "08:41",
+    "sede": "Smart Working",
+    "uscita": "18:05",
+    "note": " ITIL 4 Specialist Create Deliver and Support (CDS)"
+  },
+  {
+    "date": "2026-01-30",
+    "entrata": "07:50",
+    "sede": "Smart Working",
+    "uscita": "16:36",
+    "note": " ITIL 4 Specialist Create Deliver and Support (CDS)"
+  },
+  {
+    "date": "2026-02-02",
+    "entrata": "09:03",
+    "sede": "Smart Working",
+    "uscita": "17:28",
+    "note": "CKA Exam Prep"
+  },
+  {
+    "date": "2026-02-03",
+    "entrata": "08:22",
+    "sede": "Smart Working",
+    "uscita": "16:40",
+    "note": ""
+  },
+  {
+    "date": "2026-02-04",
+    "entrata": "08:40",
+    "sede": "In Sede",
+    "uscita": "16:36",
+    "note": ""
+  },
+  {
+    "date": "2026-02-05",
+    "entrata": "08:49",
+    "sede": "Smart Working",
+    "uscita": "16:47",
+    "note": "Cyber Guru Livello 2\" Awareness L2-2 - MODULO Bluetooth e Wi-Fi * 1h *"
+  },
+  {
+    "date": "2026-02-06",
+    "entrata": "08:09",
+    "sede": "Smart Working",
+    "uscita": "16:29",
+    "note": "Il futuro della virtualizzazione: Red Hat OpenShift Virtualization * 10:00 - 12:00 *"
+  },
+  {
+    "date": "2026-02-09",
+    "entrata": "08:24",
+    "sede": "In Sede",
+    "uscita": "17:19",
+    "note": ""
+  },
+  {
+    "date": "2026-02-10",
+    "entrata": "08:32",
+    "sede": "Smart Working",
+    "uscita": "16:48",
+    "note": ""
+  },
+  {
+    "date": "2026-02-11",
+    "entrata": "08:04",
+    "sede": "In Sede",
+    "uscita": "16:38",
+    "note": ""
+  },
+  {
+    "date": "2026-02-12",
+    "entrata": "08:42",
+    "sede": "Smart Working",
+    "uscita": "17:09",
+    "note": ""
+  },
+  {
+    "date": "2026-02-13",
+    "entrata": "08:39",
+    "sede": "Smart Working",
+    "uscita": "16:34",
+    "note": ""
+  },
+  {
+    "date": "2026-02-17",
+    "entrata": "08:36",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "Kubernetes Security"
+  },
+  {
+    "date": "2026-02-16",
+    "entrata": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-02-18",
+    "entrata": "09:12",
+    "sede": "Smart Working",
+    "uscita": "17:42",
+    "note": "Kubernetes Security"
+  },
+  {
+    "date": "2026-02-19",
+    "entrata": "07:57",
+    "sede": "In Sede",
+    "uscita": "16:08",
+    "note": "Visita Medica Aziendale * 10:00 - 10:15 *"
+  },
+  {
+    "date": "2026-02-20",
+    "entrata": "08:22",
+    "sede": "Smart Working",
+    "uscita": "16:28",
+    "note": "Cyber Guru Livello 2\" Awareness L2-2 - MODULO Social Engineering 2 * 1h *"
+  },
+  {
+    "date": "2026-02-23",
+    "entrata": "08:16",
+    "sede": "In Sede",
+    "uscita": "16:23",
+    "note": ""
+  },
+  {
+    "date": "2026-02-24",
+    "entrata": "08:36",
+    "sede": "Smart Working",
+    "uscita": "16:52",
+    "note": ""
+  },
+  {
+    "date": "2026-02-25",
+    "entrata": "09:42",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "ITIL 4 Specialist Hight Velocity IT (HVIT)"
+  },
+  {
+    "date": "2026-02-26",
+    "entrata": "08:46",
+    "sede": "Smart Working",
+    "uscita": "17:35",
+    "note": "ITIL 4 Specialist Hight Velocity IT (HVIT)"
+  },
+  {
+    "date": "2026-02-27",
+    "entrata": "10:05",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "ITIL 4 Direct, Plan & Improve (DPI)"
+  },
+  {
+    "date": "2026-03-02",
+    "entrata": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:42",
+    "note": ""
+  },
+  {
+    "date": "2026-03-03",
+    "entrata": "08:38",
+    "sede": "Smart Working",
+    "uscita": "16:53",
+    "note": ""
+  },
+  {
+    "date": "2026-03-04",
+    "entrata": "08:43",
+    "sede": "In Sede",
+    "uscita": "16:39",
+    "note": ""
+  },
+  {
+    "date": "2026-03-05",
+    "entrata": "08:39",
+    "sede": "Smart Working",
+    "uscita": "16:44",
+    "note": ""
+  },
+  {
+    "date": "2026-03-06",
+    "entrata": "08:51",
+    "sede": "Smart Working",
+    "uscita": "17:15",
+    "note": ""
+  },
+  {
+    "date": "2026-03-09",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-03-10",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-03-11",
+    "entrata": "08:46",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "ITIL 4 Specialist Direct, Plan & Improve (DPI)"
+  },
+  {
+    "date": "2026-03-12",
+    "entrata": "08:39",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": "ITIL 4 Specialist Direct, Plan & Improve (DPI)"
+  },
+  {
+    "date": "2026-03-13",
+    "entrata": "08:28",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "ITIL 4 Specialist Drive Stakeholder Value (DSV)"
+  },
+  {
+    "date": "2026-03-16",
+    "entrata": "07:58",
+    "sede": "In Sede",
+    "uscita": "16:57",
+    "note": ""
+  },
+  {
+    "date": "2026-03-17",
+    "entrata": "09:08",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": ""
+  },
+  {
+    "date": "2026-03-18",
+    "entrata": "07:53",
+    "sede": "In Sede",
+    "uscita": "16:15",
+    "note": ""
+  },
+  {
+    "date": "2026-03-19",
+    "entrata": "08:43",
+    "sede": "Smart Working",
+    "uscita": "16:45",
+    "note": ""
+  },
+  {
+    "date": "2026-03-20",
+    "entrata": "08:44",
+    "sede": "Smart Working",
+    "uscita": "16:33",
+    "note": ""
+  },
+  {
+    "date": "2026-03-23",
+    "entrata": "08:27",
+    "sede": "In Sede",
+    "uscita": "16:55",
+    "note": ""
+  },
+  {
+    "date": "2026-03-24",
+    "entrata": "08:35",
+    "sede": "Smart Working",
+    "uscita": "17:11",
+    "note": ""
+  },
+  {
+    "date": "2026-03-25",
+    "entrata": "08:46",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "note": ""
+  },
+  {
+    "date": "2026-03-26",
+    "entrata": "08:39",
+    "sede": "Smart Working",
+    "uscita": "16:37",
+    "note": ""
+  },
+  {
+    "date": "2026-03-27",
+    "entrata": "08:33",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "note": ""
+  },
+  {
+    "date": "2026-03-30",
+    "entrata": "08:28",
+    "sede": "In Sede",
+    "uscita": "16:31",
+    "note": ""
+  },
+  {
+    "date": "2026-03-31",
+    "entrata": "08:40",
+    "sede": "Smart Working",
+    "uscita": "16:46",
+    "note": ""
+  },
+  {
+    "date": "2026-04-01",
+    "entrata": "09:36",
+    "sede": "Smart Working",
+    "uscita": "16:49",
+    "note": ""
+  },
+  {
+    "date": "2026-04-02",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-04-03",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-04-07",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-04-08",
+    "entrata": "08:25",
+    "sede": "In Sede",
+    "uscita": "16:25",
+    "note": ""
+  },
+  {
+    "date": "2026-04-09",
+    "entrata": "08:52",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": ""
+  },
+  {
+    "date": "2026-04-10",
+    "entrata": "08:39",
+    "sede": "Smart Working",
+    "uscita": "17:07",
+    "note": ""
+  },
+  {
+    "date": "2026-04-13",
+    "entrata": "08:45",
+    "sede": "Smart Working",
+    "uscita": "17:08",
+    "note": "ITIL 4 Specialist Drive Stakeholder Value (DSV)"
+  },
+  {
+    "date": "2026-04-14",
+    "entrata": "09:08",
+    "sede": "Smart Working",
+    "uscita": "17:28",
+    "note": "ITIL 4 Specialist Drive Stakeholder Value (DSV)"
+  },
+  {
+    "date": "2026-04-15",
+    "entrata": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:45",
+    "note": ""
+  },
+  {
+    "date": "2026-04-16",
+    "entrata": "08:49",
+    "sede": "Smart Working",
+    "uscita": "16:46",
+    "note": ""
+  },
+  {
+    "date": "2026-04-17",
+    "entrata": "08:30",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "note": ""
+  },
+  {
+    "date": "2026-04-20",
+    "entrata": "08:42",
+    "sede": "In Sede",
+    "uscita": "16:36",
+    "note": ""
+  },
+  {
+    "date": "2026-04-21",
+    "entrata": "08:43",
+    "sede": "Smart Working",
+    "uscita": "17:01",
+    "note": ""
+  },
+  {
+    "date": "2026-04-22",
+    "entrata": "07:58",
+    "sede": "In Sede",
+    "uscita": "16:46",
+    "note": ""
+  },
+  {
+    "date": "2026-04-23",
+    "entrata": "08:46",
+    "sede": "Smart Working",
+    "uscita": "16:35",
+    "note": ""
+  },
+  {
+    "date": "2026-04-24",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-04-27",
+    "entrata": "09:14",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": ""
+  },
+  {
+    "date": "2026-04-28",
+    "entrata": "09:04",
+    "sede": "Smart Working",
+    "uscita": "17:14",
+    "note": ""
+  },
+  {
+    "date": "2026-04-29",
+    "entrata": "08:48",
+    "sede": "Smart Working",
+    "uscita": "16:57",
+    "note": ""
+  },
+  {
+    "date": "2026-04-30",
+    "entrata": "08:41",
+    "sede": "Smart Working",
+    "uscita": "16:35",
+    "note": ""
+  },
+  {
+    "date": "2026-05-04",
+    "entrata": "07:56",
+    "sede": "In Sede",
+    "uscita": "16:33",
+    "note": ""
+  },
+  {
+    "date": "2026-05-05",
+    "entrata": "09:17",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": ""
+  },
+  {
+    "date": "2026-05-06",
+    "entrata": "08:19",
+    "sede": "Smart Working",
+    "uscita": "16:48",
+    "note": ""
+  },
+  {
+    "date": "2026-05-07",
+    "entrata": "08:57",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "note": ""
+  },
+  {
+    "date": "2026-05-08",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-05-11",
+    "entrata": "08:05",
+    "sede": "In Sede",
+    "uscita": "16:35",
+    "note": ""
+  },
+  {
+    "date": "2026-05-12",
+    "entrata": "08:30",
+    "sede": "Smart Working",
+    "uscita": "16:48",
+    "note": ""
+  },
+  {
+    "date": "2026-05-13",
+    "entrata": "09:08",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "note": "Convocazione Assemblea Generale ** 14:00 - 16:30 **"
+  },
+  {
+    "date": "2026-05-14",
+    "entrata": "08:34",
+    "sede": "Smart Working",
+    "uscita": "17:05",
+    "note": ""
+  },
+  {
+    "date": "2026-05-15",
+    "entrata": "08:33",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": ""
+  },
+  {
+    "date": "2026-05-18",
+    "entrata": "08:03",
+    "sede": "In Sede",
+    "uscita": "16:54",
+    "note": ""
+  },
+  {
+    "date": "2026-05-19",
+    "entrata": "08:49",
+    "sede": "Smart Working",
+    "uscita": "16:58",
+    "note": ""
+  },
+  {
+    "date": "2026-05-20",
+    "entrata": "07:55",
+    "sede": "In Sede",
+    "uscita": "16:08",
+    "note": ""
+  },
+  {
+    "date": "2026-05-21",
+    "entrata": "08:08",
+    "sede": "Smart Working",
+    "uscita": "16:55",
+    "note": ""
+  },
+  {
+    "date": "2026-05-25",
+    "entrata": "08:44",
+    "sede": "Smart Working",
+    "uscita": "17:45",
+    "note": ""
+  },
+  {
+    "date": "2026-05-26",
+    "entrata": "08:30",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "Kubernetes Networking"
+  },
+  {
+    "date": "2026-05-29",
+    "entrata": "08:51",
+    "sede": "Smart Working",
+    "uscita": "17:31",
+    "note": "Kubernetes Networking - Exam Prep"
+  },
+  {
+    "date": "2026-05-22",
+    "entrata": "08:08",
+    "sede": "Smart Working",
+    "uscita": "16:57",
+    "note": ""
+  },
+  {
+    "date": "2026-05-27",
+    "entrata": "08:30",
+    "sede": "Smart Working",
+    "uscita": "17:30",
+    "note": "Kubernetes Networking"
+  },
+  {
+    "date": "2026-05-28",
+    "entrata": "08:37",
+    "sede": "Smart Working",
+    "uscita": "16:56",
+    "note": ""
+  },
+  {
+    "date": "2026-06-03",
+    "entrata": "08:01",
+    "sede": "In Sede",
+    "uscita": "16:08",
+    "note": ""
+  },
+  {
+    "date": "2026-06-01",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2026-06-04",
+    "entrata": "11:42",
+    "sede": "Smart Working",
+    "uscita": "18:53",
+    "note": ""
+  },
+  {
+    "date": "2026-06-05",
+    "entrata": "08:55",
+    "sede": "Smart Working",
+    "uscita": "17:02",
+    "note": ""
+  },
+  {
+    "date": "2026-06-08",
+    "entrata": "08:41",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "note": "OpenStack Administrator Certified   ** 09:00 - 14:00 **   Comunicazione  Sindacale ** 14:00 - 16:30 **"
+  },
+  {
+    "date": "2026-06-09",
+    "entrata": "08:31",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "note": "OpenStack Administrator Certified ** 09:00 - 17:00 **"
+  },
+  {
+    "date": "2026-06-10",
+    "entrata": "08:22",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "note": "OpenStack Administrator Certified ** 09:00 - 17:00 **"
+  },
+  {
+    "date": "2026-06-11",
+    "entrata": "08:52",
+    "sede": "Smart Working",
+    "uscita": "17:46",
+    "note": "OpenStack Administrator Certified ** 09:00 - 17:00 **"
+  },
+  {
+    "date": "2026-06-12",
+    "entrata": "08:31",
+    "sede": "Smart Working",
+    "uscita": "17:28",
+    "note": "OpenStack Administrator Certified ** 09:00 - 17:00 **"
+  },
+  {
+    "date": "2026-06-15",
+    "entrata": "08:27",
+    "sede": "In Sede",
+    "uscita": "16:33",
+    "note": ""
+  },
+  {
+    "date": "2026-06-16",
+    "entrata": "09:15",
+    "sede": "Smart Working",
+    "uscita": "16:42",
+    "note": ""
+  },
+  {
+    "date": "2026-06-17",
+    "entrata": "08:01",
+    "sede": "In Sede",
+    "uscita": "16:06",
+    "note": ""
+  },
+  {
+    "date": "2026-06-18",
+    "entrata": "08:45",
+    "sede": "Smart Working",
+    "uscita": "16:03",
+    "note": ""
+  },
+  {
+    "date": "2026-06-19",
+    "entrata": "",
+    "sede": "Assenza",
+    "uscita": "",
+    "note": "ROL"
+  },
+  {
+    "date": "2026-06-22",
+    "entrata": "08:08",
+    "sede": "In Sede",
+    "uscita": "16:01",
+    "note": ""
+  },
+  {
+    "date": "2026-06-23",
+    "entrata": "09:01",
+    "sede": "Smart Working",
+    "uscita": "17:14",
+    "note": ""
+  },
+  {
+    "date": "2026-06-24",
+    "entrata": "09:10",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "note": ""
+  },
+  {
+    "date": "2026-06-25",
+    "entrata": "08:58",
+    "sede": "Smart Working",
+    "uscita": "17:17",
+    "note": ""
+  },
+  {
+    "date": "2026-06-26",
+    "entrata": "09:04",
+    "sede": "Smart Working",
+    "uscita": "",
+    "note": ""
+  }
+]

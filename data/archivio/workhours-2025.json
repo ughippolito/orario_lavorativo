@@ -1,0 +1,2582 @@
+[
+  {
+    "date": "2025-01-02",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-01-03",
+    "entrata": "11:03",
+    "entrata_norm": "11:03",
+    "sede": "Smart Working",
+    "uscita": "19:51",
+    "uscita_teorica": "19:39",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-07",
+    "entrata": "07:31",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "16:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-08",
+    "entrata": "10:29",
+    "entrata_norm": "10:29",
+    "sede": "Smart Working",
+    "uscita": "18:27",
+    "uscita_teorica": "19:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-09",
+    "entrata": "10:29",
+    "entrata_norm": "10:29",
+    "sede": "Smart Working",
+    "uscita": "19:55",
+    "uscita_teorica": "19:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-10",
+    "entrata": "07:28",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:23",
+    "uscita_teorica": "16:04",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-11",
+    "entrata": "07:31",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:21",
+    "uscita_teorica": "16:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-13",
+    "entrata": "07:30",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:27",
+    "uscita_teorica": "16:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-14",
+    "entrata": "10:28",
+    "entrata_norm": "10:28",
+    "sede": "Smart Working",
+    "uscita": "19:55",
+    "uscita_teorica": "19:04",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-15",
+    "entrata": "11:29",
+    "entrata_norm": "11:29",
+    "sede": "Smart Working",
+    "uscita": "19:50",
+    "uscita_teorica": "20:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-16",
+    "entrata": "10:10",
+    "entrata_norm": "10:10",
+    "sede": "In Sede",
+    "uscita": "19:48",
+    "uscita_teorica": "18:46",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-17",
+    "entrata": "07:30",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:27",
+    "uscita_teorica": "16:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-20",
+    "entrata": "07:31",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:28",
+    "uscita_teorica": "16:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-21",
+    "entrata": "10:37",
+    "entrata_norm": "10:37",
+    "sede": "Smart Working",
+    "uscita": "19:46",
+    "uscita_teorica": "19:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-22",
+    "entrata": "10:57",
+    "entrata_norm": "10:57",
+    "sede": "Smart Working",
+    "uscita": "19:25",
+    "uscita_teorica": "19:33",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-23",
+    "entrata": "07:33",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:09",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-24",
+    "entrata": "07:25",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:35",
+    "uscita_teorica": "16:01",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-27",
+    "entrata": "07:30",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "17:02",
+    "uscita_teorica": "16:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-28",
+    "entrata": "08:54",
+    "entrata_norm": "08:54",
+    "sede": "Smart Working",
+    "uscita": "17:55",
+    "uscita_teorica": "17:30",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-29",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-01-30",
+    "entrata": "10:50",
+    "entrata_norm": "10:50",
+    "sede": "Smart Working",
+    "uscita": "19:59",
+    "uscita_teorica": "19:26",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-01-31",
+    "entrata": "07:30",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:29",
+    "uscita_teorica": "16:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-03",
+    "entrata": "07:32",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:07",
+    "uscita_teorica": "16:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-04",
+    "entrata": "12:41",
+    "entrata_norm": "12:41",
+    "sede": "Smart Working",
+    "uscita": "20:03",
+    "uscita_teorica": "21:17",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-05",
+    "entrata": "07:40",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "uscita_teorica": "16:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-06",
+    "entrata": "10:53",
+    "entrata_norm": "10:53",
+    "sede": "Smart Working",
+    "uscita": "19:56",
+    "uscita_teorica": "19:29",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-07",
+    "entrata": "07:39",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:15",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-10",
+    "entrata": "07:36",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:36",
+    "uscita_teorica": "16:12",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-11",
+    "entrata": "07:35",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:29",
+    "uscita_teorica": "16:11",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-12",
+    "entrata": "11:14",
+    "entrata_norm": "11:14",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "19:50",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-13",
+    "entrata": "10:51",
+    "entrata_norm": "10:51",
+    "sede": "Smart Working",
+    "uscita": "20:33",
+    "uscita_teorica": "19:27",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-14",
+    "entrata": "07:27",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:25",
+    "uscita_teorica": "16:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-17",
+    "entrata": "07:24",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:25",
+    "uscita_teorica": "16:00",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-18",
+    "entrata": "10:50",
+    "entrata_norm": "10:50",
+    "sede": "Smart Working",
+    "uscita": "19:58",
+    "uscita_teorica": "19:26",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-19",
+    "entrata": "07:32",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:42",
+    "uscita_teorica": "16:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-20",
+    "entrata": "07:35",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:20",
+    "uscita_teorica": "16:11",
+    "giustificativo": "SI",
+    "note": "Assemblea da remoto 14:00 - 16:20"
+  },
+  {
+    "date": "2025-02-21",
+    "entrata": "07:30",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "16:30",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 07:30 - 16:30"
+  },
+  {
+    "date": "2025-02-24",
+    "entrata": "07:28",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:04",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-25",
+    "entrata": "07:43",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:31",
+    "uscita_teorica": "16:19",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-26",
+    "entrata": "10:49",
+    "entrata_norm": "10:49",
+    "sede": "Smart Working",
+    "uscita": "19:55",
+    "uscita_teorica": "19:25",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-27",
+    "entrata": "07:27",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:38",
+    "uscita_teorica": "16:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-02-28",
+    "entrata": "07:26",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:33",
+    "uscita_teorica": "16:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-01",
+    "entrata": "07:40",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:28",
+    "uscita_teorica": "16:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-03",
+    "entrata": "07:29",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-04",
+    "entrata": "13:51",
+    "entrata_norm": "13:51",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "22:27",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-05",
+    "entrata": "07:57",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:37",
+    "uscita_teorica": "16:33",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-06",
+    "entrata": "10:48",
+    "entrata_norm": "10:48",
+    "sede": "Smart Working",
+    "uscita": "19:57",
+    "uscita_teorica": "19:24",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-07",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-03-10",
+    "entrata": "07:35",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:47",
+    "uscita_teorica": "16:11",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-11",
+    "entrata": "07:47",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:42",
+    "uscita_teorica": "16:23",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-12",
+    "entrata": "07:48",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "14:06",
+    "uscita_teorica": "16:24",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-13",
+    "entrata": "10:54",
+    "entrata_norm": "10:54",
+    "sede": "Smart Working",
+    "uscita": "19:47",
+    "uscita_teorica": "19:30",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-14",
+    "entrata": "08:15",
+    "entrata_norm": "08:15",
+    "sede": "Smart Working",
+    "uscita": "16:47",
+    "uscita_teorica": "16:51",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-17",
+    "entrata": "07:28",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:04",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-18",
+    "entrata": "10:29",
+    "entrata_norm": "10:29",
+    "sede": "In Sede",
+    "uscita": "20:01",
+    "uscita_teorica": "19:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-19",
+    "entrata": "10:27",
+    "entrata_norm": "10:27",
+    "sede": "Smart Working",
+    "uscita": "19:53",
+    "uscita_teorica": "19:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-20",
+    "entrata": "10:36",
+    "entrata_norm": "10:36",
+    "sede": "Smart Working",
+    "uscita": "19:42",
+    "uscita_teorica": "19:12",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-21",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-03-24",
+    "entrata": "07:25",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:34",
+    "uscita_teorica": "16:01",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-25",
+    "entrata": "11:21",
+    "entrata_norm": "11:21",
+    "sede": "Smart Working",
+    "uscita": "18:51",
+    "uscita_teorica": "19:57",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-26",
+    "entrata": "10:30",
+    "entrata_norm": "10:30",
+    "sede": "In Sede",
+    "uscita": "19:33",
+    "uscita_teorica": "19:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-27",
+    "entrata": "12:55",
+    "entrata_norm": "12:55",
+    "sede": "Smart Working",
+    "uscita": "20:21",
+    "uscita_teorica": "21:31",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-28",
+    "entrata": "07:27",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "16:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-03-31",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-04-01",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-04-02",
+    "entrata": "11:21",
+    "entrata_norm": "11:21",
+    "sede": "Smart Working",
+    "uscita": "19:55",
+    "uscita_teorica": "19:57",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-03",
+    "entrata": "07:33",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:09",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-04",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-04-07",
+    "entrata": "09:11",
+    "entrata_norm": "09:11",
+    "sede": "Smart Working",
+    "uscita": "18:02",
+    "uscita_teorica": "17:47",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-08",
+    "entrata": "10:37",
+    "entrata_norm": "10:37",
+    "sede": "Smart Working",
+    "uscita": "19:48",
+    "uscita_teorica": "19:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-09",
+    "entrata": "10:32",
+    "entrata_norm": "10:32",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "19:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-10",
+    "entrata": "10:37",
+    "entrata_norm": "10:37",
+    "sede": "Smart Working",
+    "uscita": "19:56",
+    "uscita_teorica": "19:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-11",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-04-14",
+    "entrata": "07:27",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:29",
+    "uscita_teorica": "16:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-15",
+    "entrata": "08:52",
+    "entrata_norm": "08:52",
+    "sede": "In Sede",
+    "uscita": "18:01",
+    "uscita_teorica": "17:28",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-16",
+    "entrata": "09:17",
+    "entrata_norm": "09:17",
+    "sede": "Smart Working",
+    "uscita": "16:45",
+    "uscita_teorica": "17:53",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-17",
+    "entrata": "10:31",
+    "entrata_norm": "10:31",
+    "sede": "Smart Working",
+    "uscita": "19:53",
+    "uscita_teorica": "19:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-18",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-04-19",
+    "entrata": "07:35",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:19",
+    "uscita_teorica": "16:11",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-22",
+    "entrata": "10:21",
+    "entrata_norm": "10:21",
+    "sede": "In Sede",
+    "uscita": "19:29",
+    "uscita_teorica": "18:57",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-23",
+    "entrata": "10:37",
+    "entrata_norm": "10:37",
+    "sede": "Smart Working",
+    "uscita": "19:38",
+    "uscita_teorica": "19:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-04-24",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-04-28",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-04-29",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Sciopero GG"
+  },
+  {
+    "date": "2025-04-30",
+    "entrata": "11:05",
+    "entrata_norm": "11:05",
+    "sede": "Smart Working",
+    "uscita": "20:14",
+    "uscita_teorica": "19:41",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-02",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-05-03",
+    "entrata": "07:41",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:25",
+    "uscita_teorica": "16:17",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-05",
+    "entrata": "07:24",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:28",
+    "uscita_teorica": "16:00",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-06",
+    "entrata": "10:52",
+    "entrata_norm": "10:52",
+    "sede": "In Sede",
+    "uscita": "19:49",
+    "uscita_teorica": "19:28",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-07",
+    "entrata": "07:34",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:33",
+    "uscita_teorica": "16:10",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-08",
+    "entrata": "10:52",
+    "entrata_norm": "10:52",
+    "sede": "Smart Working",
+    "uscita": "19:56",
+    "uscita_teorica": "19:28",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-09",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-05-12",
+    "entrata": "07:27",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:25",
+    "uscita_teorica": "16:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-13",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-05-14",
+    "entrata": "07:50",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:36",
+    "uscita_teorica": "16:26",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-15",
+    "entrata": "11:51",
+    "entrata_norm": "11:51",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "20:27",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-16",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-05-19",
+    "entrata": "07:29",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-20",
+    "entrata": "08:58",
+    "entrata_norm": "08:58",
+    "sede": "In Sede",
+    "uscita": "17:50",
+    "uscita_teorica": "17:34",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-21",
+    "entrata": "07:40",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "16:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-22",
+    "entrata": "11:00",
+    "entrata_norm": "11:00",
+    "sede": "Smart Working",
+    "uscita": "19:52",
+    "uscita_teorica": "19:36",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-23",
+    "entrata": "07:41",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:17",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-26",
+    "entrata": "07:22",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:26",
+    "uscita_teorica": "15:58",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-27",
+    "entrata": "08:38",
+    "entrata_norm": "08:38",
+    "sede": "In Sede",
+    "uscita": "17:34",
+    "uscita_teorica": "17:14",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-28",
+    "entrata": "11:07",
+    "entrata_norm": "11:07",
+    "sede": "Smart Working",
+    "uscita": "19:59",
+    "uscita_teorica": "19:43",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-29",
+    "entrata": "11:35",
+    "entrata_norm": "11:35",
+    "sede": "Smart Working",
+    "uscita": "20:02",
+    "uscita_teorica": "20:11",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-05-30",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-03",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-06-04",
+    "entrata": "10:54",
+    "entrata_norm": "10:54",
+    "sede": "Fuori Sede",
+    "uscita": "13:26",
+    "uscita_teorica": "19:30",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-05",
+    "entrata": "11:10",
+    "entrata_norm": "11:10",
+    "sede": "In Sede",
+    "uscita": "20:09",
+    "uscita_teorica": "19:46",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-06",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-09",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-06-10",
+    "entrata": "09:43",
+    "entrata_norm": "09:43",
+    "sede": "In Sede",
+    "uscita": "18:00",
+    "uscita_teorica": "18:19",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-11",
+    "entrata": "07:33",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:53",
+    "uscita_teorica": "16:09",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-12",
+    "entrata": "10:40",
+    "entrata_norm": "10:40",
+    "sede": "Smart Working",
+    "uscita": "19:49",
+    "uscita_teorica": "19:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-13",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-16",
+    "entrata": "07:33",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:39",
+    "uscita_teorica": "16:09",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-17",
+    "entrata": "09:23",
+    "entrata_norm": "09:23",
+    "sede": "In Sede",
+    "uscita": "16:54",
+    "uscita_teorica": "17:59",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-18",
+    "entrata": "07:46",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-19",
+    "entrata": "11:20",
+    "entrata_norm": "11:20",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "19:56",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-20",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-21",
+    "entrata": "07:46",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:20",
+    "uscita_teorica": "16:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-23",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-06-24",
+    "entrata": "08:20",
+    "entrata_norm": "08:20",
+    "sede": "Smart Working",
+    "uscita": "17:21",
+    "uscita_teorica": "16:56",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-25",
+    "entrata": "10:40",
+    "entrata_norm": "10:40",
+    "sede": "In Sede",
+    "uscita": "20:14",
+    "uscita_teorica": "19:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-26",
+    "entrata": "13:09",
+    "entrata_norm": "13:09",
+    "sede": "Smart Working",
+    "uscita": "20:02",
+    "uscita_teorica": "21:45",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-06-27",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-06-30",
+    "entrata": "07:42",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:18",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-01",
+    "entrata": "08:57",
+    "entrata_norm": "08:57",
+    "sede": "In Sede",
+    "uscita": "17:36",
+    "uscita_teorica": "17:33",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-02",
+    "entrata": "11:24",
+    "entrata_norm": "11:24",
+    "sede": "Smart Working",
+    "uscita": "19:59",
+    "uscita_teorica": "20:00",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-03",
+    "entrata": "10:30",
+    "entrata_norm": "10:30",
+    "sede": "In Sede",
+    "uscita": "20:15",
+    "uscita_teorica": "19:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-04",
+    "entrata": "08:00",
+    "entrata_norm": "08:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:00",
+    "uscita_teorica": "16:06",
+    "giustificativo": "SI",
+    "note": "Servizio fuori sede 08:00 - 17:00"
+  },
+  {
+    "date": "2025-07-07",
+    "entrata": "07:40",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:08",
+    "uscita_teorica": "16:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-08",
+    "entrata": "10:59",
+    "entrata_norm": "10:59",
+    "sede": "Smart Working",
+    "uscita": "20:00",
+    "uscita_teorica": "19:35",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-09",
+    "entrata": "08:41",
+    "entrata_norm": "08:41",
+    "sede": "In Sede",
+    "uscita": "17:46",
+    "uscita_teorica": "17:17",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-10",
+    "entrata": "11:25",
+    "entrata_norm": "11:25",
+    "sede": "Smart Working",
+    "uscita": "20:07",
+    "uscita_teorica": "20:01",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-11",
+    "entrata": "07:36",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:13",
+    "uscita_teorica": "16:12",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-14",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-07-15",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-07-16",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-07-17",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-07-18",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-07-21",
+    "entrata": "08:03",
+    "entrata_norm": "08:03",
+    "sede": "Smart Working",
+    "uscita": "16:31",
+    "uscita_teorica": "16:39",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-22",
+    "entrata": "08:51",
+    "entrata_norm": "08:51",
+    "sede": "In Sede",
+    "uscita": "17:02",
+    "uscita_teorica": "17:27",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-23",
+    "entrata": "10:26",
+    "entrata_norm": "10:26",
+    "sede": "Smart Working",
+    "uscita": "19:55",
+    "uscita_teorica": "19:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-24",
+    "entrata": "08:51",
+    "entrata_norm": "08:51",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "uscita_teorica": "17:27",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-25",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-07-26",
+    "entrata": "07:48",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:23",
+    "uscita_teorica": "16:24",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-28",
+    "entrata": "07:42",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:18",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-29",
+    "entrata": "08:40",
+    "entrata_norm": "08:40",
+    "sede": "In Sede",
+    "uscita": "17:51",
+    "uscita_teorica": "17:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-30",
+    "entrata": "11:29",
+    "entrata_norm": "11:29",
+    "sede": "Smart Working",
+    "uscita": "19:56",
+    "uscita_teorica": "20:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-07-31",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-08-01",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-04",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-05",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-06",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-07",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-08",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-11",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-12",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-13",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ferie"
+  },
+  {
+    "date": "2025-08-14",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "ROL"
+  },
+  {
+    "date": "2025-08-18",
+    "entrata": "07:53",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "16:29",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-19",
+    "entrata": "07:26",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:06",
+    "uscita_teorica": "16:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-20",
+    "entrata": "08:02",
+    "entrata_norm": "08:02",
+    "sede": "Smart Working",
+    "uscita": "16:24",
+    "uscita_teorica": "16:38",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-21",
+    "entrata": "08:26",
+    "entrata_norm": "08:26",
+    "sede": "In Sede",
+    "uscita": "16:43",
+    "uscita_teorica": "17:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-22",
+    "entrata": "07:31",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:24",
+    "uscita_teorica": "16:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-23",
+    "entrata": "07:39",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "14:00",
+    "uscita_teorica": "16:15",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-25",
+    "entrata": "07:55",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:32",
+    "uscita_teorica": "16:31",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-26",
+    "entrata": "08:49",
+    "entrata_norm": "08:49",
+    "sede": "Smart Working",
+    "uscita": "17:57",
+    "uscita_teorica": "17:25",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-27",
+    "entrata": "10:47",
+    "entrata_norm": "10:47",
+    "sede": "Smart Working",
+    "uscita": "19:50",
+    "uscita_teorica": "19:23",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-28",
+    "entrata": "11:08",
+    "entrata_norm": "11:08",
+    "sede": "Smart Working",
+    "uscita": "19:38",
+    "uscita_teorica": "19:44",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-08-29",
+    "entrata": "07:29",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:19",
+    "uscita_teorica": "16:05",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-01",
+    "entrata": "07:34",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:17",
+    "uscita_teorica": "16:10",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-02",
+    "entrata": "08:31",
+    "entrata_norm": "08:31",
+    "sede": "In Sede",
+    "uscita": "17:28",
+    "uscita_teorica": "17:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-03",
+    "entrata": "11:36",
+    "entrata_norm": "11:36",
+    "sede": "Smart Working",
+    "uscita": "19:57",
+    "uscita_teorica": "20:12",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-04",
+    "entrata": "10:53",
+    "entrata_norm": "10:53",
+    "sede": "In Sede",
+    "uscita": "19:30",
+    "uscita_teorica": "19:29",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-05",
+    "entrata": "11:08",
+    "entrata_norm": "11:08",
+    "sede": "Smart Working",
+    "uscita": "20:07",
+    "uscita_teorica": "19:44",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-08",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-09-09",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "ROL"
+  },
+  {
+    "date": "2025-09-10",
+    "entrata": "10:57",
+    "entrata_norm": "10:57",
+    "sede": "Smart Working",
+    "uscita": "19:45",
+    "uscita_teorica": "19:33",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-11",
+    "entrata": "10:30",
+    "entrata_norm": "10:30",
+    "sede": "In Sede",
+    "uscita": "19:34",
+    "uscita_teorica": "19:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-12",
+    "entrata": "08:06",
+    "entrata_norm": "08:06",
+    "sede": "Smart Working",
+    "uscita": "16:12",
+    "uscita_teorica": "16:42",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-15",
+    "entrata": "07:42",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:23",
+    "uscita_teorica": "16:18",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-16",
+    "entrata": "08:56",
+    "entrata_norm": "08:56",
+    "sede": "In Sede",
+    "uscita": "17:33",
+    "uscita_teorica": "17:32",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-17",
+    "entrata": "10:40",
+    "entrata_norm": "10:40",
+    "sede": "Smart Working",
+    "uscita": "18:57",
+    "uscita_teorica": "19:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-18",
+    "entrata": "07:39",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:08",
+    "uscita_teorica": "16:15",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-19",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Riposo compensativo 6/7/Q"
+  },
+  {
+    "date": "2025-09-22",
+    "entrata": "08:27",
+    "entrata_norm": "08:27",
+    "sede": "Smart Working",
+    "uscita": "16:37",
+    "uscita_teorica": "17:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-23",
+    "entrata": "08:47",
+    "entrata_norm": "08:47",
+    "sede": "Smart Working",
+    "uscita": "17:54",
+    "uscita_teorica": "17:23",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-24",
+    "entrata": "11:01",
+    "entrata_norm": "11:01",
+    "sede": "Smart Working",
+    "uscita": "19:48",
+    "uscita_teorica": "19:37",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-25",
+    "entrata": "07:58",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:33",
+    "uscita_teorica": "16:34",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-26",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Malattia autocertificata 1GG"
+  },
+  {
+    "date": "2025-09-29",
+    "entrata": "07:37",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:21",
+    "uscita_teorica": "16:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-09-30",
+    "entrata": "07:46",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:09",
+    "uscita_teorica": "16:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-01",
+    "entrata": "08:54",
+    "entrata_norm": "08:54",
+    "sede": "In Sede",
+    "uscita": "17:03",
+    "uscita_teorica": "17:30",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-02",
+    "entrata": "09:00",
+    "entrata_norm": "09:00",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "uscita_teorica": "17:36",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-03",
+    "entrata": "09:00",
+    "entrata_norm": "09:00",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "uscita_teorica": "17:36",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-06",
+    "entrata": "08:46",
+    "entrata_norm": "08:46",
+    "sede": "In Sede",
+    "uscita": "17:02",
+    "uscita_teorica": "17:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-07",
+    "entrata": "08:44",
+    "entrata_norm": "08:44",
+    "sede": "Smart Working",
+    "uscita": "17:02",
+    "uscita_teorica": "17:20",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-08",
+    "entrata": "08:46",
+    "entrata_norm": "08:46",
+    "sede": "Smart Working",
+    "uscita": "17:01",
+    "uscita_teorica": "17:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-09",
+    "entrata": "08:31",
+    "entrata_norm": "08:31",
+    "sede": "In Sede",
+    "uscita": "16:39",
+    "uscita_teorica": "17:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-10",
+    "entrata": "08:50",
+    "entrata_norm": "08:50",
+    "sede": "Smart Working",
+    "uscita": "17:06",
+    "uscita_teorica": "17:26",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-13",
+    "entrata": "08:37",
+    "entrata_norm": "08:37",
+    "sede": "Smart Working",
+    "uscita": "16:59",
+    "uscita_teorica": "17:13",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-14",
+    "entrata": "08:40",
+    "entrata_norm": "08:40",
+    "sede": "Smart Working",
+    "uscita": "16:57",
+    "uscita_teorica": "17:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-15",
+    "entrata": "09:17",
+    "entrata_norm": "09:17",
+    "sede": "In Sede",
+    "uscita": "17:07",
+    "uscita_teorica": "17:53",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-16",
+    "entrata": "08:26",
+    "entrata_norm": "08:26",
+    "sede": "In Sede",
+    "uscita": "16:34",
+    "uscita_teorica": "17:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-17",
+    "entrata": "08:44",
+    "entrata_norm": "08:44",
+    "sede": "Smart Working",
+    "uscita": "16:43",
+    "uscita_teorica": "17:20",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-20",
+    "entrata": "08:31",
+    "entrata_norm": "08:31",
+    "sede": "In Sede",
+    "uscita": "16:39",
+    "uscita_teorica": "17:07",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-21",
+    "entrata": "08:32",
+    "entrata_norm": "08:32",
+    "sede": "Smart Working",
+    "uscita": "16:49",
+    "uscita_teorica": "17:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-22",
+    "entrata": "08:30",
+    "entrata_norm": "08:30",
+    "sede": "Smart Working",
+    "uscita": "16:06",
+    "uscita_teorica": "17:06",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-23",
+    "entrata": "08:13",
+    "entrata_norm": "08:13",
+    "sede": "Smart Working",
+    "uscita": "16:11",
+    "uscita_teorica": "16:49",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-24",
+    "entrata": "08:54",
+    "entrata_norm": "08:54",
+    "sede": "Smart Working",
+    "uscita": "17:03",
+    "uscita_teorica": "17:30",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-27",
+    "entrata": "08:25",
+    "entrata_norm": "08:25",
+    "sede": "In Sede",
+    "uscita": "16:33",
+    "uscita_teorica": "17:01",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-28",
+    "entrata": "08:34",
+    "entrata_norm": "08:34",
+    "sede": "Smart Working",
+    "uscita": "17:12",
+    "uscita_teorica": "17:10",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-29",
+    "entrata": "08:26",
+    "entrata_norm": "08:26",
+    "sede": "Smart Working",
+    "uscita": "16:48",
+    "uscita_teorica": "17:02",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-10-30",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ex Festivit\u00e0"
+  },
+  {
+    "date": "2025-10-31",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ex Festivit\u00e0"
+  },
+  {
+    "date": "2025-11-03",
+    "entrata": "08:27",
+    "entrata_norm": "08:27",
+    "sede": "In Sede",
+    "uscita": "16:34",
+    "uscita_teorica": "17:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-04",
+    "entrata": "08:43",
+    "entrata_norm": "08:43",
+    "sede": "Smart Working",
+    "uscita": "16:50",
+    "uscita_teorica": "17:19",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-05",
+    "entrata": "08:40",
+    "entrata_norm": "08:40",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "17:16",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-06",
+    "entrata": "08:12",
+    "entrata_norm": "08:12",
+    "sede": "In Sede",
+    "uscita": "16:30",
+    "uscita_teorica": "16:48",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-07",
+    "entrata": "08:46",
+    "entrata_norm": "08:46",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "uscita_teorica": "17:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-10",
+    "entrata": "08:32",
+    "entrata_norm": "08:32",
+    "sede": "In Sede",
+    "uscita": "16:35",
+    "uscita_teorica": "17:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-11",
+    "entrata": "09:38",
+    "entrata_norm": "09:38",
+    "sede": "Smart Working",
+    "uscita": "17:45",
+    "uscita_teorica": "18:14",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-12",
+    "entrata": "09:00",
+    "entrata_norm": "09:00",
+    "sede": "Fuori Sede",
+    "uscita": "17:15",
+    "uscita_teorica": "17:06",
+    "giustificativo": "SI",
+    "note": "RedHat Connection Rome 2025"
+  },
+  {
+    "date": "2025-11-13",
+    "entrata": "08:47",
+    "entrata_norm": "08:47",
+    "sede": "Smart Working",
+    "uscita": "17:02",
+    "uscita_teorica": "17:23",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-14",
+    "entrata": "08:01",
+    "entrata_norm": "08:01",
+    "sede": "Smart Working",
+    "uscita": "16:08",
+    "uscita_teorica": "16:37",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-17",
+    "entrata": "08:48",
+    "entrata_norm": "08:48",
+    "sede": "Smart Working",
+    "uscita": "17:07",
+    "uscita_teorica": "17:24",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-18",
+    "entrata": "08:35",
+    "entrata_norm": "08:35",
+    "sede": "Smart Working",
+    "uscita": "16:54",
+    "uscita_teorica": "17:11",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-19",
+    "entrata": "07:50",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:10",
+    "uscita_teorica": "16:26",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-20",
+    "entrata": "08:48",
+    "entrata_norm": "08:48",
+    "sede": "Smart Working",
+    "uscita": "17:10",
+    "uscita_teorica": "17:24",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-21",
+    "entrata": "08:46",
+    "entrata_norm": "08:46",
+    "sede": "Smart Working",
+    "uscita": "16:44",
+    "uscita_teorica": "17:22",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-24",
+    "entrata": "08:41",
+    "entrata_norm": "08:41",
+    "sede": "In Sede",
+    "uscita": "16:47",
+    "uscita_teorica": "17:17",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-25",
+    "entrata": "08:27",
+    "entrata_norm": "08:27",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "17:03",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-26",
+    "entrata": "08:55",
+    "entrata_norm": "08:55",
+    "sede": "Smart Working",
+    "uscita": "17:01",
+    "uscita_teorica": "17:31",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-27",
+    "entrata": "08:52",
+    "entrata_norm": "08:52",
+    "sede": "Smart Working",
+    "uscita": "17:06",
+    "uscita_teorica": "17:28",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-11-28",
+    "entrata": "08:32",
+    "entrata_norm": "08:32",
+    "sede": "Smart Working",
+    "uscita": "16:48",
+    "uscita_teorica": "17:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-01",
+    "entrata": "08:32",
+    "entrata_norm": "08:32",
+    "sede": "Smart Working",
+    "uscita": "16:53",
+    "uscita_teorica": "17:08",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-02",
+    "entrata": "08:17",
+    "entrata_norm": "08:17",
+    "sede": "Smart Working",
+    "uscita": "16:35",
+    "uscita_teorica": "16:53",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-03",
+    "entrata": "08:39",
+    "entrata_norm": "08:39",
+    "sede": "Smart Working",
+    "uscita": "14:30",
+    "uscita_teorica": "17:15",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-04",
+    "entrata": "08:58",
+    "entrata_norm": "08:58",
+    "sede": "Smart Working",
+    "uscita": "17:32",
+    "uscita_teorica": "17:34",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-05",
+    "entrata": "07:56",
+    "entrata_norm": "08:00",
+    "sede": "In Sede",
+    "uscita": "16:42",
+    "uscita_teorica": "16:32",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-09",
+    "entrata": "08:58",
+    "entrata_norm": "08:58",
+    "sede": "Smart Working",
+    "uscita": "17:02",
+    "uscita_teorica": "17:34",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-10",
+    "entrata": "09:16",
+    "entrata_norm": "09:16",
+    "sede": "In Sede",
+    "uscita": "16:34",
+    "uscita_teorica": "17:52",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-11",
+    "entrata": "08:55",
+    "entrata_norm": "08:55",
+    "sede": "Smart Working",
+    "uscita": "17:31",
+    "uscita_teorica": "17:31",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-12",
+    "entrata": "07:57",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "17:18",
+    "uscita_teorica": "16:33",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-15",
+    "entrata": "08:03",
+    "entrata_norm": "08:03",
+    "sede": "In Sede",
+    "uscita": "16:59",
+    "uscita_teorica": "16:39",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-16",
+    "entrata": "08:47",
+    "entrata_norm": "08:47",
+    "sede": "Smart Working",
+    "uscita": "17:00",
+    "uscita_teorica": "17:23",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-17",
+    "entrata": "08:59",
+    "entrata_norm": "08:59",
+    "sede": "Smart Working",
+    "uscita": "16:30",
+    "uscita_teorica": "17:35",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-18",
+    "entrata": "08:25",
+    "entrata_norm": "08:25",
+    "sede": "Smart Working",
+    "uscita": "16:57",
+    "uscita_teorica": "17:01",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-19",
+    "entrata": "07:39",
+    "entrata_norm": "08:00",
+    "sede": "Smart Working",
+    "uscita": "16:21",
+    "uscita_teorica": "16:15",
+    "giustificativo": "",
+    "note": ""
+  },
+  {
+    "date": "2025-12-22",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ex Festivit\u00e0"
+  },
+  {
+    "date": "2025-12-23",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Ex Festivit\u00e0"
+  },
+  {
+    "date": "2025-12-24",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Festivit\u00e0 SADO"
+  },
+  {
+    "date": "2025-12-29",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Festivit\u00e0 SADO"
+  },
+  {
+    "date": "2025-12-30",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "Festivit\u00e0 SADO"
+  },
+  {
+    "date": "2025-12-31",
+    "entrata": "***",
+    "entrata_norm": "***",
+    "sede": "Assenza",
+    "uscita": "***",
+    "uscita_teorica": "***",
+    "giustificativo": "",
+    "note": "ROL"
+  }
+]

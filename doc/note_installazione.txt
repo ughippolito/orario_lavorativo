@@ -1,0 +1,48 @@
+# Installa docker
+sudo apt update
+sudo apt install docker.io -y
+#Assicurati che l'utente abbia i permessi per utilizzare docker
+
+#con utente amministratore
+sudo usermod -aG docker <utente>
+
+su - <utente>
+newgrp docker
+
+#per un test
+docker version
+
+# Installa k3d
+curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v5.8.3 bash
+k3d --version
+
+# Installa kubectl
+sudo snap install kubectl --classic
+kubect version
+
+#Scarica e installa il Progetto
+#Apri il terminale sul PC
+#Assegnare alla variabile d'ambiente $INSTALL_DIR il path in cui verrà posizionata la dir del progetto orario_lavorativo
+#Aggiungere questa variabile all'ambiente del proprio utente (opzionale)
+
+/ *****
+esempio
+export INSTALL_DIR=/opt oppure export INSTALL_DIR=$HOME
+/ *****
+#In ogni caso un percorso per cui si dispongono i permessi
+
+#Posizionarsi nel percorso scelto per l'installazione
+cd $INSTALL_DIR
+
+
+git clone https://github.com/ughippolito/orario_lavorativo.git
+cd orario_lavorativo
+
+#Lancio del Cluster
+chmod +x orario-cluster/scripts/gestione/crea_cluster_orario.sh
+./orario-cluster/scripts/gestione/crea_cluster_orario.sh
+
+#Infine, aggiungi il dominio locale nel file /etc/hosts del nuovo PC
+sudo vi /etc/hosts 
+
+127.0.0.1 orario.local dashboard.local

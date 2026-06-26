@@ -1,0 +1,100 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: gestione-orario
+  name: workhours-frontend
+spec:
+  replicas: 6
+  selector:
+    matchLabels:
+      app: workhours-frontend
+  template:
+    metadata:
+      labels:
+        app: workhours-frontend
+    spec:
+      # TEMPO DI SPEGNIMENTO SUPER RIDOTTO (PRONTO AL FAILOVER)
+      terminationGracePeriodSeconds: 2
+
+      # DISTRIBUZIONE BILANCIATA SU PIÙ NODI
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app: workhours-frontend
+                topologyKey: kubernetes.io/hostname
+
+      # GARANTISCE LA MIGLIORE DISTRIBUZIONE POSSIBILE
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: workhours-frontend
+
+      # FAILOVER MOLTO RAPIDO SE UN NODO DIVENTA NOTREADY
+      tolerations:
+        - key: node.kubernetes.io/unreachable
+          operator: Exists
+          effect: NoExecute
+          tolerationSeconds: 5
+        - key: node.kubernetes.io/not-ready
+          operator: Exists
+          effect: NoExecute
+          tolerationSeconds: 5
+
+      containers:
+        - name: workhours-frontend
+          image: ughippo/gestione-orario:latest
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 3000
+
+          # HEALTHCHECK PRONTI PER FAILOVER FAST
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 0
+            periodSeconds: 2
+            timeoutSeconds: 1
+            failureThreshold: 1
+
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+            timeoutSeconds: 2
+            failureThreshold: 3
+
+          # RICHIESTE DI RISORSE → scheduling bilanciato garantito
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
+          # VOLUME CONDIVISO (HOSTPATH)
+          volumeMounts:
+            - mountPath: /orario_lavorativo/data
+              name: workhours-storage
+            - mountPath: /orario_lavorativo/manuale
+              name: manuale-storage
+      volumes:
+        - name: workhours-storage
+          hostPath:
+            path: /mnt/data/workhours
+            type: Directory
+        - name: manuale-storage
+          hostPath:
+            path: /mnt/data/manuale
+            type: Directory
