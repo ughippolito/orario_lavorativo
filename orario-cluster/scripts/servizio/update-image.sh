@@ -34,23 +34,15 @@ echo "📖 4. Controllo modifiche Git..."
 # Aggiungiamo i file per vedere se c'è qualcosa di nuovo
 git add .
 
-# Verifichiamo se ci sono modifiche effettive da committare
-if git diff-index --quiet HEAD --; then
-    echo "⚠️ Nessuna modifica rilevata nei file. Git skip."
-else
-    echo "🚀 Modifiche rilevate. Eseguo commit e push..."
-    
-    # Configurazione utente locale (opzionale se già fatta globalmente)
-    git config user.email "ughippo@example.com"
-    git config user.name "ughippo"
+git config user.email "ughippo@example.com"
+git config user.name "ughippo"
 
-    git commit -m "Update Image: $(date +'%Y-%m-%d %H:%M:%S')"
-    
-    # Se hai configurato il Token come ti ho suggerito prima, 
-    # questo comando non chiederà password.
-    git push origin main --force
-    echo "✅ GitHub aggiornato!"
-fi
+git commit -m "Update Image: $(date +'%Y-%m-%d %H:%M:%S')"
+   
+# Se hai configurato il Token come ti ho suggerito prima, 
+# questo comando non chiederà password.
+git push origin main --force
+echo "✅ GitHub aggiornato!"
 
 echo ""
 echo "✨ Operazione completata con successo!"
