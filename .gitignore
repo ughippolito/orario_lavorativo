@@ -1,7 +1,6 @@
 # Esclusioni principali
-node_modules/
-backup/
-logs/
+backup/*
+logs/*
 
 # Gestione DATA: IGNORA i file di backup ma TIENI l'archivio completo
 data/backups/*.json
