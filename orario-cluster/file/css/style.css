@@ -20,6 +20,10 @@
             background-color: #450a0a !important;
         }
 
+	.dashboard-section {
+ 	    margin-top: 30px;
+	}
+
         body.dark-mode {
             color-scheme: dark;
             --bg: #0f172a;
