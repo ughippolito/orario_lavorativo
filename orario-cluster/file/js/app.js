@@ -262,21 +262,27 @@
             }
         }
 
-        async function loadInitialData() {
-            try {
-                const r = await fetch('/records').then(res => res.json());
-                records = Array.isArray(r) ? r : [];
-                const backups = await fetch('/backups').then(res => res.json()).catch(()=>[]);
-                const bSel = document.getElementById('backup-select');
-                bSel.innerHTML = '<option value="">-- seleziona --</option>';
-                backups.forEach(f => bSel.add(new Option(f, f)));
-                const archives = await fetch('/archives').then(res => res.json()).catch(()=>[]);
-                const aSel = document.getElementById('archive-select');
-                aSel.innerHTML = '<option value="">-- seleziona --</option>';
-                archives.forEach(f => aSel.add(new Option(f, f)));
-                refreshUI();
-            } catch (e) { console.error(e); }
-        }
+	async function loadInitialData() {
+    		try {
+        		const r = await apiLoadRecords();
+        		records = Array.isArray(r) ? r : [];
+
+        		const backups = await apiLoadBackups().catch(() => []);
+        		const bSel = document.getElementById('backup-select');
+        		bSel.innerHTML = '<option value="">-- seleziona --</option>';
+        		backups.forEach(f => bSel.add(new Option(f, f)));
+
+        		const archives = await apiLoadArchives().catch(() => []);
+        		const aSel = document.getElementById('archive-select');
+        		aSel.innerHTML = '<option value="">-- seleziona --</option>';
+        		archives.forEach(f => aSel.add(new Option(f, f)));
+
+        		refreshUI();
+    		} catch (e) {
+        		console.error(e);
+    		}
+	}
+
 
         function refreshUI() {
             const selectedMese = document.getElementById('filter-mese').value;
