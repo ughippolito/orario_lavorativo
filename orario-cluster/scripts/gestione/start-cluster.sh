@@ -1,58 +1,57 @@
 #!/bin/bash
-set -euo pipefail
 
-CLUSTER_NAME="orario-cluster"
-
-echo ""
-echo "🧹 Stop eventuale cluster $CLUSTER_NAME..."
-k3d cluster stop "$CLUSTER_NAME" >/dev/null 2>&1
+CLUSTER_NAME="${CLUSTER_NAME:-orario-cluster}"
 
 echo ""
-echo -n "🚀 Avvio cluster k3d: $CLUSTER_NAME "
+echo "==== Avvio controllato del cluster k3d: ${CLUSTER_NAME} ===="
+echo ""
 
-# Funzione per mostrare i puntini in background
-show_progress() {
-  local pid=$1
-  local delay=0.75
-  local spinstr='...'
-  while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
-    echo -n "."
-    sleep $delay
-  done
-  echo " ✔"
-}
+# 1. Verifica preventiva: controlliamo se il Load Balancer è già in esecuzione
+LB_CONTAINER=$(docker ps --filter "name=k3d-${CLUSTER_NAME}-serverlb" --filter "status=running" -q)
 
-# Avviamo k3d in background e nascondiamo l'output
-k3d cluster start "$CLUSTER_NAME" >/dev/null 2>&1 &
-K3D_PID=$!
+if [ -z "$LB_CONTAINER" ]; then
+        # Se il Load Balancer è spento, procediamo con l'avvio normale
+        echo "Avvio cluster..."
+        k3d cluster start "${CLUSTER_NAME}"
+        echo ""
+        echo "Attendiamo 10 secondi l'inizializzazione dei nodi..."
+        sleep 10
+else
+        echo "I container risultano già accesi. Verifichiamo lo stato dei nodi di Kubernetes..."
+fi
 
-# Avviamo l'animazione dei puntini passando il PID di k3d
-show_progress $K3D_PID
+# 2. Controllo rigoroso dello stato dei nodi (valida sia se appena acceso che se già attivo)
+NOT_READY_COUNT=$(kubectl get nodes --no-headers 2>/dev/null | grep -w "NotReady" | wc -l)
+TOTAL_NODES=$(kubectl get nodes --no-headers 2>/dev/null | wc -l)
+
+# 3. Se ci sono nodi non pronti o kubectl non risponde
+if [ "$TOTAL_NODES" -eq 0 ] || [ "$NOT_READY_COUNT" -gt 0 ]; then
+        echo ""
+        echo "⚠️  ATTENZIONE: Rilevati $NOT_READY_COUNT nodi in stato 'NotReady'."
+        echo "I container Docker sono accesi, ma i nodi worker non sono sincronizzati con la rete."
+        echo ""
+        
+        read -p "Vuoi eseguire un riavvio forzato del cluster per riallineare la rete? (s/n): " -n 1 -r
+        echo ""
+        
+        if [[ $REPLY =~ ^[Ss]$ ]]; then
+                echo "Esecuzione riavvio forzato in corso..."
+                k3d cluster stop "${CLUSTER_NAME}"
+                sleep 3
+                k3d cluster start "${CLUSTER_NAME}"
+                
+                echo "Attendiamo 10 secondi l'allineamento definitivo della rete..."
+                sleep 10
+        else
+                echo "Operazione annullata. Il cluster rimane non utilizzabile."
+                exit 1
+        fi
+fi
 
 echo ""
-echo "🔄 Aggiornamento configurazione kubeconfig..."
-k3d kubeconfig merge "$CLUSTER_NAME" -s -d >/dev/null 2>&1
-
+echo "Stato corrente del cluster:"
+kubectl get nodes -o wide
+kubectl get pod -o wide -n gestione-orario
 echo ""
-echo -n "⏳ Attendo API server "
-ATTEMPTS=0
-MAX_ATTEMPTS=30
-until kubectl get --raw=/healthz >/dev/null 2>&1; do
-    ((ATTEMPTS++))
-    if [[ $ATTEMPTS -gt $MAX_ATTEMPTS ]]; then
-        echo -e "\n❌ Timeout: API server non risponde"
-        exit 1
-    fi
-    echo -n "."
-    sleep 2
-done
-
-echo -e " ✔"
-
-echo ""
-echo "⏳ Attendo che tutti i nodi siano Ready..."
-kubectl wait --for=condition=Ready nodes --all --timeout=60s >/dev/null 2>&1
-
-echo ""
-echo "🎉 Cluster avviato correttamente!"
+echo "==== 🟢 Avvio completato con successo. ===="
 echo ""

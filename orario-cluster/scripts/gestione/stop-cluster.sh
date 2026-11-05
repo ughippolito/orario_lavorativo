@@ -1,28 +1,25 @@
 #!/bin/bash
-set -euo pipefail
 
 CLUSTER_NAME="${CLUSTER_NAME:-orario-cluster}"
-SCRIPTDIR="$INSTALL_DIR/orario_lavorativo/orario-cluster/scripts/gestione"
 
-echo ""
-echo "==== Arresto controllato del cluster k3d: ${CLUSTER_NAME} ===="
-echo ""
-echo "Stato iniziale:"
-kubectl get nodes || true
-echo ""
-echo "Arresto cluster..."
-k3d cluster stop "${CLUSTER_NAME}" || true
-echo ""
-echo "Verifica container k3d residui..."
-LEFT=$(docker ps --format '{{.Names}}' | grep k3d || true)
-if [[ -n "${LEFT}" ]]; then
-  echo "⚠  Ancora attivi:"
-  echo "${LEFT}"
+# Controlla se ci sono container attivi legati al cluster
+RUNNING_CONTAINERS=$(docker ps --filter "name=k3d-${CLUSTER_NAME}-" -q)
+
+if [ -z "$RUNNING_CONTAINERS" ]; then
+        echo ""
+        echo "Cluster $CLUSTER_NAME già fermo."
+        echo ""
 else
-  echo "✔  Nessun container k3d attivo."
+        echo ""
+        echo "==== Arresto controllato del cluster k3d: ${CLUSTER_NAME} ===="
+        echo ""
+        echo "Stato iniziale:"
+        kubectl get nodes -o wide 2>/dev/null || echo "Impossibile contattare il cluster (già irraggiungibile)"
+        kubectl get pod -o wide -n gestione-orario 2>/dev/null || true
+        echo ""
+        echo "Arresto cluster..."
+        k3d cluster stop "${CLUSTER_NAME}"
+        echo ""
+        echo "==== 🟢 Arresto completato. ===="
+        echo ""
 fi
-echo ""
-kubectl get nodes 2>/dev/null || echo "Cluster Fermo"
-echo ""
-echo "==== 🟢 Arresto completato. ===="
-echo ""
