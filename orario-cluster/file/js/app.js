@@ -225,6 +225,13 @@
     
         document.getElementById('smart-count').textContent = s_c;
         document.getElementById('assenze-count').textContent = a_c;
+
+	updateCharts(
+    		r_c,
+    		s_c,
+    		a_c
+	);	
+
     }
 
         function updateFilterInteractivity() {
