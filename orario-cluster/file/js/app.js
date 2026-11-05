@@ -81,10 +81,6 @@
         let filterMode = 'mese';
         const WORKDAY_MIN = 486;
 
-        const pad = n => String(n).padStart(2, '0');
-        const toMin = s => { if(!s || !s.includes(':')) return null; const [h,m]=s.split(':').map(Number); return h*60+m; };
-        const fromMin = m => { const abs=Math.abs(m); return (m<0?'-':'')+pad(Math.floor(abs/60))+':'+pad(abs%60); };
-         
 		// Calcola i minuti totali di lavoro basandosi sulle select Ore e Minuti
         const getWorkdayMin = () => {
             const ore = parseInt(document.getElementById('filter-ore-lavoro').value) || 0;
@@ -396,17 +392,6 @@
                     </tr>`;
             });
             tbody.innerHTML = rowsHtml;
-        }
-
-        function getPasqua(y) {
-            const a = y % 19, b = Math.floor(y / 100), c = y % 100,
-                  d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25),
-                  g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30,
-                  i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7,
-                  m = Math.floor((a + 11 * h + 22 * l) / 451);
-            const month = Math.floor((h + l - 7 * m + 114) / 31);
-            const day = ((h + l - 7 * m + 114) % 31) + 1;
-            return new Date(y, month - 1, day);
         }
 
         document.getElementById('btn-salva').onclick = async () => {
