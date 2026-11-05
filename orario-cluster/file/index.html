@@ -79,7 +79,16 @@
                     <div class="summary-item"><div>Smart</div><div class="value" id="smart-count">0</div></div>
                     <div class="summary-item"><div>Assenze</div><div class="value" id="assenze-count">0</div></div>
                 </div>
+				<div class="section">
+               <h3>📊 Dashboard Presenze</h3>
+               <div style="max-width: 500px; margin: auto;">
+                    <canvas id="presenzeChart"></canvas>
+               </div>
+               </div>
             </section>
+			
+			
+			
 
             <div class="status-bar" id="status-bar" aria-live="polite">
                 <div class="chip info" id="chip-origin">
@@ -240,6 +249,7 @@
         </aside>
     </div>
 	
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="js/config.js"></script>
 	<script src="js/utils.js"></script>
 	<script src="js/api.js"></script>
