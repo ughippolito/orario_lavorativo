@@ -10,13 +10,19 @@ async function apiLoadArchives() {
     return fetch('/archives').then(r => r.json());
 }
 
-async function apiSaveRecord(rec) {
+async function apiSaveRecord(record) {
     return fetch('/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(rec)
+        body: JSON.stringify(record)
+    });
+}
+
+async function apiDeleteAll() {
+    return fetch('/delete-all', {
+        method: 'DELETE'
     });
 }
 
@@ -24,12 +30,6 @@ async function apiDeleteRecord(date) {
     return fetch(`/delete/${encodeURIComponent(date)}`, {
         method: 'DELETE'
     }).then(r => r.json());
-}
-
-async function apiDeleteAll() {
-    return fetch('/delete-all', {
-        method: 'DELETE'
-    });
 }
 
 async function apiRestoreBackup(filename) {

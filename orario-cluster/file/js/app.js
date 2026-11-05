@@ -4,7 +4,7 @@
             const opt = document.createElement('option');
             opt.value = i;
             opt.textContent = i.toString().padStart(2, '0');
-            if (i === 6) opt.selected = true; // Imposta 06 come default
+            if (i === APP_CONFIG.DEFAULT_WORKDAY_MINUTES) opt.selected = true; // Imposta 06 come default
             selectMinuti.appendChild(opt);
         }
 		
@@ -19,7 +19,7 @@
             const opt = document.createElement('option');
             opt.value = i;
             opt.textContent = i.toString().padStart(2, '0');
-            if (i === 8) opt.selected = true; // Imposta 08 come default
+            if (i === APP_CONFIG.DEFAULT_WORKDAY_HOURS) opt.selected = true; // Imposta 08 come default
             selectOre.appendChild(opt);
         }
 		
@@ -34,7 +34,7 @@
             const opt = document.createElement('option');
             opt.value = i;
             opt.textContent = i.toString();
-			if (i === 4) opt.selected = true;
+			if (i === APP_CONFIG.DEFAULT_MONTHLY_RETURNS) opt.selected = true;
             selectRientri.appendChild(opt);
         }
 		
@@ -75,7 +75,7 @@
         });
 		
         let currentPage = 1;
-        let pageSize = 30;
+	let pageSize = APP_CONFIG.DEFAULT_PAGE_SIZE;
         let orderedRecords = [];
         let records = [];
         let filterMode = 'mese';
@@ -158,7 +158,9 @@
                     }
     
                     // Allinea la base dell'entrata: se si entra prima delle 08:00, conta come 08:00
-                    const baseMin = e < 480 ? 480 : e;
+                    const baseMin =  e < APP_CONFIG.WORKDAY_START_MINUTES
+  					? APP_CONFIG.WORKDAY_START_MINUTES
+    					: e; 
                     const utDinamica = baseMin + workdayMin;
     
                     if (u !== null) {
@@ -403,13 +405,13 @@
                 note: document.getElementById('note').value
             };
             if(!rec.date) return alert("Data mancante");
-            await fetch('/save', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(rec)});
+	    await apiSaveRecord(rec);	
             resetForm(); await loadInitialData();
         };
 
         document.getElementById('btn-elimina-tutto').onclick = async () => {
             if(confirm("⚠ CANCELLARE TUTTO?")){
-                await fetch('/delete-all', { method:'DELETE' });
+		await apiDeleteAll();    
                 records = []; renderTable([]); alert("Fatto!");
             }
         };
@@ -418,7 +420,7 @@
             const filename = document.getElementById('backup-select').value;
             if(!filename) return alert("Scegli un backup");
             if (confirm("Ripristinare questo backup?")) {
-                const res = await fetch('/restore', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ filename }) }).then(r => r.json());
+		const res = await apiRestoreBackup(filename);    
                 if(res.success) { await loadInitialData(); }
             }
         };
@@ -427,8 +429,7 @@
             const filename = document.getElementById('archive-select').value;
             if (!filename) return alert("Scegli un archivio");
             try {
-                const response = await fetch(`/archive/${encodeURIComponent(filename)}`);
-                const data = await response.json();
+		const data = await apiLoadArchive(filename);    
                 if (Array.isArray(data)) {
                     records = data; filterMode = 'archivio'; currentPage = 1;
                     const yearMatch = filename.match(/\d{4}/);
@@ -469,7 +470,7 @@
         window.deleteRow = async (d) => {
             if (!confirm(`Eliminare record del ${d.split('-').reverse().join('-')}?`)) return;
             try {
-                const res = await fetch(`/delete/${encodeURIComponent(d)}`, { method: 'DELETE' }).then(r => r.json());
+		const res = await apiDeleteRecord(d);    
                 if (res.success) await loadInitialData();
             } catch (e) { console.error(e); }
         };
