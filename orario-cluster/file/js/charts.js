@@ -84,7 +84,7 @@ function updateSaldoChart(records, workdayMin) {
         const saldo =
             u - uscitaTeorica;
 
-	const parts = r.date.split('-');    
+        const parts = r.date.split('-');
 
         labels.push(
             `${parts[2]}/${parts[1]}`
@@ -107,47 +107,45 @@ function updateSaldoChart(records, workdayMin) {
 
     saldoChart = new Chart(ctx, {
         type: 'bar',
+
         data: {
-            labels,
+            labels: labels,
             datasets: [{
                 label: 'Saldo minuti',
                 data: values,
                 backgroundColor: colors
             }]
         },
+
         options: {
             responsive: true,
             maintainAspectRatio: false,
 
-		plugins: {
-    legend: {
-        display: false
-    },
+            plugins: {
+                legend: {
+                    display: false
+                },
 
-    tooltip: {
-        callbacks: {
-            label: function(context) {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
 
-                const value = context.raw;
+                            const value = context.raw;
 
-                return `Saldo: ${fromMin(value)}`;
-            }
-        }
-    }
-}
+                            return `Saldo: ${fromMin(value)}`;
+                        }
+                    }
+                }
+            },
 
             scales: {
-
                 y: {
-                    beginAtZero: true,
-
                     ticks: {
                         callback: function(value) {
 
-                            const h =
-                                Math.floor(
-                                    Math.abs(value) / 60
-                                );
+                            const h = Math.floor(
+                                Math.abs(value) / 60
+                            );
 
                             const m =
                                 Math.abs(value) % 60;
@@ -155,7 +153,7 @@ function updateSaldoChart(records, workdayMin) {
                             const segno =
                                 value < 0 ? '-' : '+';
 
-                            return `${segno}${h}:${String(m).padStart(2,'0')}`;
+                            return `${segno}${h}:${String(m).padStart(2, '0')}`;
                         }
                     }
                 }
