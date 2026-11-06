@@ -15,31 +15,49 @@ function updateCharts(presenza, smartWorking, assenze) {
 
     presenzeChart = new Chart(ctx, {
         type: 'pie',
+
         data: {
             labels: [
                 'Presenza',
                 'Smart Working',
                 'Assenza'
             ],
+
             datasets: [{
                 data: [
                     presenza,
                     smartWorking,
                     assenze
                 ],
+
                 backgroundColor: [
                     '#22c55e',
                     '#3b82f6',
                     '#ef4444'
-                ]
+                ],
+
+                borderWidth: 2,
+                radius: '75%'
             }]
         },
+
         options: {
             responsive: true,
             maintainAspectRatio: false,
+
+	    layout: {
+    padding: {
+        top: 10,
+        bottom: 20,
+        left: 10,
+        right: 15
+    }
+},	
+
             plugins: {
+
                 legend: {
-                    position: 'bottom'
+                    position: 'right'
                 }
             }
         }
@@ -110,6 +128,7 @@ function updateSaldoChart(records, workdayMin) {
 
         data: {
             labels: labels,
+
             datasets: [{
                 label: 'Saldo minuti',
                 data: values,
@@ -121,31 +140,67 @@ function updateSaldoChart(records, workdayMin) {
             responsive: true,
             maintainAspectRatio: false,
 
+	    layout: {
+    padding: {
+        top: 10,
+        bottom: 20,
+        left: 10,
+        right: 10
+    }
+},	
+
             plugins: {
+
                 legend: {
                     display: false
                 },
 
                 tooltip: {
                     callbacks: {
+
                         label: function(context) {
 
-                            const value = context.raw;
-
-                            return `Saldo: ${fromMin(value)}`;
+                            return `Saldo: ${fromMin(context.raw)}`;
                         }
                     }
                 }
             },
 
             scales: {
+
                 y: {
+
+                    beginAtZero: true,
+
+                    grid: {
+
+                        color: function(context) {
+
+                            if (context.tick.value === 0) {
+                                return '#ffffff';
+                            }
+
+                            return 'rgba(255,255,255,0.08)';
+                        },
+
+                        lineWidth: function(context) {
+
+                            if (context.tick.value === 0) {
+                                return 2;
+                            }
+
+                            return 1;
+                        }
+                    },
+
                     ticks: {
+
                         callback: function(value) {
 
-                            const h = Math.floor(
-                                Math.abs(value) / 60
-                            );
+                            const h =
+                                Math.floor(
+                                    Math.abs(value) / 60
+                                );
 
                             const m =
                                 Math.abs(value) % 60;

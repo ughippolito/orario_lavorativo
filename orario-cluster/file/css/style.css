@@ -21,30 +21,37 @@
         }
 
 	.dashboard-section {
- 	    margin-top: 30px;
-	}
+    margin-top: 25px;
+}
 
-	.dashboard-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 20px;
-        }
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 30px;
+    align-items: center;
+}
 
-        .chart-card {
-            height: 400px;
-        }
+.chart-card {
+    height: 340px;
+    padding-bottom: 20px;
+}
 
-        .chart-card h3 {
-            margin-bottom: 15px;
-            text-align: center;
-        }
+.chart-card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
 
-	@media (max-width: 1200px) {
-          .dashboard-grid {
-          grid-template-columns: 1fr;
-        }
-       }
+@media (max-width: 1200px) {
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+        height: 350px;
+    }
+}
+
 
         body.dark-mode {
             color-scheme: dark;
