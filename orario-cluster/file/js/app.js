@@ -232,6 +232,11 @@
     		a_c
 	);	
 
+	updateSaldoChart(
+               orderedRecords,
+               getWorkdayMin()
+        );
+
     }
 
         function updateFilterInteractivity() {

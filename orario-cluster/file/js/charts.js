@@ -1,12 +1,11 @@
 let presenzeChart = null;
+let saldoChart = null;
 
 function updateCharts(presenza, smartWorking, assenze) {
 
     const canvas = document.getElementById('presenzeChart');
 
-    if (!canvas) {
-        return;
-    }
+    if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
 
@@ -16,77 +15,134 @@ function updateCharts(presenza, smartWorking, assenze) {
 
     presenzeChart = new Chart(ctx, {
         type: 'pie',
-
         data: {
             labels: [
                 'Presenza',
                 'Smart Working',
                 'Assenza'
             ],
-
             datasets: [{
                 data: [
                     presenza,
                     smartWorking,
                     assenze
                 ],
-
                 backgroundColor: [
                     '#22c55e',
                     '#3b82f6',
                     '#ef4444'
-                ],
-
-                borderColor: '#ffffff',
-                borderWidth: 2
+                ]
             }]
         },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom'
+                }
+            }
+        }
+    });
+}
 
+function updateSaldoChart(records, workdayMin) {
+
+    const canvas = document.getElementById('saldoChart');
+
+    if (!canvas) return;
+
+    const labels = [];
+    const values = [];
+    const colors = [];
+
+    records.forEach(r => {
+
+        if (
+            r.sede === 'Assenza' ||
+            !r.entrata ||
+            !r.uscita
+        ) {
+            return;
+        }
+
+        const e = toMin(r.entrata);
+        const u = toMin(r.uscita);
+
+        if (e === null || u === null) {
+            return;
+        }
+
+        const baseMin =
+            e < APP_CONFIG.WORKDAY_START_MINUTES
+                ? APP_CONFIG.WORKDAY_START_MINUTES
+                : e;
+
+        const uscitaTeorica =
+            baseMin + workdayMin;
+
+        const saldo =
+            u - uscitaTeorica;
+
+        labels.push(
+            r.date.split('-').reverse().join('/')
+        );
+
+        values.push(saldo);
+
+        colors.push(
+            saldo >= 0
+                ? '#22c55e'
+                : '#ef4444'
+        );
+    });
+
+    const ctx = canvas.getContext('2d');
+
+    if (saldoChart) {
+        saldoChart.destroy();
+    }
+
+    saldoChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Saldo minuti',
+                data: values,
+                backgroundColor: colors
+            }]
+        },
         options: {
             responsive: true,
             maintainAspectRatio: false,
 
-            layout: {
-                padding: 10
+            plugins: {
+                legend: {
+                    display: false
+                }
             },
 
-            plugins: {
+            scales: {
 
-                title: {
-                    display: true,
-                    text: 'Distribuzione Presenze',
-                    font: {
-                        size: 16,
-                        weight: 'bold'
-                    }
-                },
+                y: {
+                    beginAtZero: true,
 
-                legend: {
-                    position: 'right',
-                    labels: {
-                        padding: 20,
-                        boxWidth: 15
-                    }
-                },
+                    ticks: {
+                        callback: function(value) {
 
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-
-                            const value = context.raw;
-
-                            const total =
-                                context.dataset.data.reduce(
-                                    (a, b) => a + b,
-                                    0
+                            const h =
+                                Math.floor(
+                                    Math.abs(value) / 60
                                 );
 
-                            const perc =
-                                total > 0
-                                    ? ((value / total) * 100).toFixed(1)
-                                    : 0;
+                            const m =
+                                Math.abs(value) % 60;
 
-                            return `${context.label}: ${value} (${perc}%)`;
+                            const segno =
+                                value < 0 ? '-' : '+';
+
+                            return `${segno}${h}:${String(m).padStart(2,'0')}`;
                         }
                     }
                 }
