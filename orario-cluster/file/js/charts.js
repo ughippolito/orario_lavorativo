@@ -84,8 +84,10 @@ function updateSaldoChart(records, workdayMin) {
         const saldo =
             u - uscitaTeorica;
 
+	const parts = r.date.split('-');    
+
         labels.push(
-            r.date.split('-').reverse().join('/')
+            `${parts[2]}/${parts[1]}`
         );
 
         values.push(saldo);
