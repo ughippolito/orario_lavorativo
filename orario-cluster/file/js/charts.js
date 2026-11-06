@@ -117,11 +117,22 @@ function updateSaldoChart(records, workdayMin) {
             responsive: true,
             maintainAspectRatio: false,
 
-            plugins: {
-                legend: {
-                    display: false
-                }
-            },
+		plugins: {
+    legend: {
+        display: false
+    },
+
+    tooltip: {
+        callbacks: {
+            label: function(context) {
+
+                const value = context.raw;
+
+                return `Saldo: ${fromMin(value)}`;
+            }
+        }
+    }
+}
 
             scales: {
 
