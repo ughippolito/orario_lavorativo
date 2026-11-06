@@ -62,7 +62,7 @@ function updateCharts(presenza, smartWorking, assenze) {
                 },
 
                 legend: {
-                    position: 'bottom',
+                    position: 'right',
                     labels: {
                         padding: 20,
                         boxWidth: 15
