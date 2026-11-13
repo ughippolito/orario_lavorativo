@@ -62,7 +62,8 @@ Il progetto nasce per tracciare con precisione la propria attività lavorativa g
 │   └── scripts/            # Script di automazione (gestione cluster, backup, aggiornamenti)
 └── setup/                  # Script e configurazioni di setup ambiente (es. WSL)
 
-## 🚀 Guida Rapida (Quick Start) — Ambiente Windows 11 / WSL2
+
+# 🚀 Guida Rapida (Quick Start) — Ambiente Windows 11 / WSL2
 
 Il progetto è progettato e ottimizzato per essere eseguito su **Windows 11 tramite WSL2 (Windows Subsystem for Linux)**. Segui i passaggi nell'ordine indicato per preparare l'ambiente e avviare l'infrastruttura completa.
 
