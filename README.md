@@ -12,34 +12,34 @@ Il progetto nasce per tracciare con precisione la propria attività lavorativa g
 
 ## 🚀 Caratteristiche Principali
 
-* **Tracciamento Giornaliero Flessibile:** Registrazione di orari di entrata, uscita, tipologia di sede e note descrittive.
-* **Calcolo Uscita Teorica e Saldi (Smart Logic):** 
-  * Gestione automatica della soglia minima mattutina (es. ingresso prima delle 08:00 calcolato a partire dalle 08:00).
-  * Calcolo dinamico dell'orario di uscita ideale basato sulla durata configurabile della giornata lavorativa (es. 8 ore e 06 minuti).
-  * Calcolo in tempo reale del saldo minuti giornaliero e totale (con evidenza visiva di eventuali deficit).
-* **Doppia Vista Interattiva:**
-  * **Tabella:** Elenco paginato e ordinabile dei record con filtri avanzati per mese, anno, sede e ricerca testuale nelle note.
-  * **Calendario Mensile:** Visualizzazione grafica a griglia mensile con indicazione dei giorni festivi italiani (inclusa Pasqua/Pasquetta calcolate dinamicamente), weekend e colorazione basata sullo stato della giornata.
-* **Dashboard Statistica:**
-  * Grafici a torta per la ripartizione delle sedi (Presenza, Smart Working, Assenze).
-  * Grafici a barre per il monitoraggio storico del saldo minuti giornaliero.
-* **Resilienza e Gestione Dati:**
-  * Salvataggio su file JSON locale (`data/workhours.json`).
-  * Sistema di **auto-backup** temporizzato con policy di retention integrata (mantenimento degli ultimi backup).
-  * Funzionalità di **rotazione annuale** automatica dell'archivio storico.
-  * Ripristino rapido dei dati da file di backup o archivi passati.
-* **Esportazione e Documentazione:**
-  * Esportazione dei dati filtrati in formato CSV (con supporto BOM per una corretta visualizzazione dei caratteri speciali e accenti in Excel).
-  * Download diretto del manuale utente in formato PDF integrato nell'interfaccia.
+- **Tracciamento Giornaliero Flessibile:** Registrazione di orari di entrata, uscita, tipologia di sede e note descrittive.
+- **Calcolo Uscita Teorica e Saldi (Smart Logic):** 
+  - Gestione automatica della soglia minima mattutina (es. ingresso prima delle 08:00 calcolato a partire dalle 08:00).
+  - Calcolo dinamico dell'orario di uscita ideale basato sulla durata configurabile della giornata lavorativa (es. 8 ore e 06 minuti).
+  - Calcolo in tempo reale del saldo minuti giornaliero e totale (con evidenza visiva di eventuali deficit).
+- **Doppia Vista Interattiva:**
+  - **Tabella:** Elenco paginato e ordinabile dei record con filtri avanzati per mese, anno, sede e ricerca testuale nelle note.
+  - **Calendario Mensile:** Visualizzazione grafica a griglia mensile con indicazione dei giorni festivi italiani (inclusa Pasqua/Pasquetta calcolate dinamicamente), weekend e colorazione basata sullo stato della giornata.
+- **Dashboard Statistica:**
+  - Grafici a torta per la ripartizione delle sedi (Presenza, Smart Working, Assenze).
+  - Grafici a barre per il monitoraggio storico del saldo minuti giornaliero.
+- **Resilienza e Gestione Dati:**
+  - Salvataggio su file JSON locale (`data/workhours.json`).
+  - Sistema di **auto-backup** temporizzato con policy di retention integrata (mantenimento degli ultimi backup).
+  - Funzionalità di **rotazione annuale** automatica dell'archivio storico.
+  - Ripristino rapido dei dati da file di backup o archivi passati.
+- **Esportazione e Documentazione:**
+  - Esportazione dei dati filtrati in formato CSV (con supporto BOM per una corretta visualizzazione dei caratteri speciali e accenti in Excel).
+  - Download diretto del manuale utente in formato PDF integrato nell'interfaccia.
 
 ---
 
 ## 🛠️ Stack Tecnologico
 
-* **Backend:** Node.js, Express
-* **Frontend:** HTML5, CSS3, JavaScript (Vanilla), Chart.js (per la generazione della dashboard grafica)
-* **Containerizzazione & Orchestrazione:** Docker, Kubernetes (k3d), Traefik Ingress, certificati TLS locali con `mkcert`
-* **Automazione & Scripting:** Bash scripts per la gestione del ciclo di vita del cluster, dei backup e dei deployment
+- **Backend:** Node.js, Express
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla), Chart.js (per la generazione della dashboard grafica)
+- **Containerizzazione & Orchestrazione:** Docker, Kubernetes (k3d), Traefik Ingress, certificati TLS locali con `mkcert`
+- **Automazione & Scripting:** Bash scripts per la gestione del ciclo di vita del cluster, dei backup e dei deployment
 
 ---
 
@@ -61,22 +61,25 @@ Il progetto nasce per tracciare con precisione la propria attività lavorativa g
 │   ├── k8s/                # Manifest YAML per Deployment, Service, Ingress e Dashboard
 │   └── scripts/            # Script di automazione (gestione cluster, backup, aggiornamenti)
 └── setup/                  # Script e configurazioni di setup ambiente (es. WSL)
+```
 
 ---
 
-# 🚀 Guida Rapida (Quick Start) — Ambiente Windows 11 / WSL2
+## 🚀 Guida Rapida (Quick Start) — Ambiente Windows 11 / WSL2
 
 Il progetto è progettato e ottimizzato per essere eseguito su **Windows 11 tramite WSL2 (Windows Subsystem for Linux)**. Segui i passaggi nell'ordine indicato per preparare l'ambiente e avviare l'infrastruttura completa.
 
 ---
 
 ## 📋 Prerequisiti di Sistema
-* **Sistema Operativo:** Windows 11 con **WSL2** attivo (distribuzione consigliata: Ubuntu 22.04 o 24.04).
-* **Permessi:** Privilegi di amministratore (`sudo`) all'interno della distribuzione Linux WSL.
+
+- **Sistema Operativo:** Windows 11 con **WSL2** attivo (distribuzione consigliata: Ubuntu 22.04 o 24.04).
+- **Permessi:** Privilegi di amministratore (`sudo`) all'interno della distribuzione Linux WSL.
 
 ---
 
 ### ⚙️ Step 1: Setup Preliminare dell'Ambiente WSL2
+
 Prima di avviare il progetto per la prima volta, esegui lo script di configurazione dalla root del repository. Questo script automatizza l'intera preparazione dell'ambiente:
 1. Copia il file `.wslconfig` nella directory utente di Windows 11 per ottimizzare le risorse assegnate a WSL2.
 2. Configura i parametri `inotify` del kernel Linux (`/etc/sysctl.conf`) necessari per evitare errori di limite file durante l'esecuzione dei container.
@@ -104,6 +107,7 @@ chmod +x setup/install-wslconfig.sh
 ---
 
 ### ☸️ Step 2: Creazione e Avvio del Cluster Kubernetes (k3d)
+
 Una volta riavviato WSL2, puoi creare e avviare l'intero cluster Kubernetes locale completo di applicazione web, Traefik Ingress, dashboard di monitoraggio e certificati TLS locali utilizzando gli script presenti in `orario-cluster/scripts/gestione/`:
 
 ```bash
@@ -116,25 +120,26 @@ chmod +x orario-cluster/scripts/servizio/*.sh
 ```
 
 #### Comandi Utili per la Gestione Quotidiana del Cluster
+
 All'interno di `orario-cluster/scripts/gestione/` sono disponibili tutti gli script per controllare il ciclo di vita del sistema:
 
-* **Verificare lo stato di nodi, pod e servizi:**
+- **Verificare lo stato di nodi, pod e servizi:**
   ```bash
   ./orario-cluster/scripts/gestione/stato-cluster.sh
   ```
-* **Fermare il cluster (mantenendo i dati e la configurazione):**
+- **Fermare il cluster (mantenendo i dati e la configurazione):**
   ```bash
   ./orario-cluster/scripts/gestione/stop-cluster.sh
   ```
-* **Riavviare un cluster già creato:**
+- **Riavviare un cluster già creato:**
   ```bash
   ./orario-cluster/scripts/gestione/start-cluster.sh
   ```
-* **Consultare i log dell'applicazione nel cluster:**
+- **Consultare i log dell'applicazione nel cluster:**
   ```bash
   ./orario-cluster/scripts/gestione/logs-cluster.sh
   ```
-* **Aggiornare l'immagine applicativa dopo modifiche al codice:**
+- **Aggiornare l'immagine applicativa dopo modifiche al codice:**
   ```bash
   ./orario-cluster/scripts/gestione/update-image-cluster.sh
   ```
@@ -142,6 +147,7 @@ All'interno di `orario-cluster/scripts/gestione/` sono disponibili tutti gli scr
 ---
 
 ### 💻 Step 3 (Alternativo): Avvio Standalone in Locale (Solo Node.js)
+
 Se desideri avviare esclusivamente l'applicazione web senza utilizzare Docker o il cluster Kubernetes k3d:
 
 ```bash
@@ -149,4 +155,3 @@ cd ~/orario_lavorativo/orario-cluster/file
 npm install
 node server.js
 ```
-L'applicazione sarà immediatamente accessibile dal browser di Windows 11 all'indirizzo `http://localhost:3000`.
