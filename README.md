@@ -62,6 +62,7 @@ Il progetto nasce per tracciare con precisione la propria attività lavorativa g
 │   └── scripts/            # Script di automazione (gestione cluster, backup, aggiornamenti)
 └── setup/                  # Script e configurazioni di setup ambiente (es. WSL)
 
+---
 
 # 🚀 Guida Rapida (Quick Start) — Ambiente Windows 11 / WSL2
 
@@ -69,7 +70,7 @@ Il progetto è progettato e ottimizzato per essere eseguito su **Windows 11 tram
 
 ---
 
-### 📋 Prerequisiti di Sistema
+## 📋 Prerequisiti di Sistema
 * **Sistema Operativo:** Windows 11 con **WSL2** attivo (distribuzione consigliata: Ubuntu 22.04 o 24.04).
 * **Permessi:** Privilegi di amministratore (`sudo`) all'interno della distribuzione Linux WSL.
 
