@@ -1,0 +1,15 @@
+# Esclusioni principali
+backup/*
+logs/*
+
+# Gestione DATA: IGNORA i file di backup ma TIENI l'archivio completo
+data/backups/*.json
+
+# Sincronizza esplicitamente la cartella archivio
+!data/archivio/*
+
+# Mantiene le strutture delle cartelle
+!backup/.gitkeep
+!data/backups/.gitkeep
+!data/archivio/.gitkeep
+!logs/.gitkeep

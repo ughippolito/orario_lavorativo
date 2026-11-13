@@ -1,0 +1,218 @@
+let presenzeChart = null;
+let saldoChart = null;
+
+function updateCharts(presenza, smartWorking, assenze) {
+
+    const canvas = document.getElementById('presenzeChart');
+
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    if (presenzeChart) {
+        presenzeChart.destroy();
+    }
+
+    presenzeChart = new Chart(ctx, {
+        type: 'pie',
+
+        data: {
+            labels: [
+                'Presenza',
+                'Smart Working',
+                'Assenza'
+            ],
+
+            datasets: [{
+                data: [
+                    presenza,
+                    smartWorking,
+                    assenze
+                ],
+
+                backgroundColor: [
+                    '#22c55e',
+                    '#3b82f6',
+                    '#ef4444'
+                ],
+
+                borderWidth: 2,
+                radius: '75%'
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+	    layout: {
+    padding: {
+        top: 10,
+        bottom: 20,
+        left: 10,
+        right: 15
+    }
+},	
+
+            plugins: {
+
+                legend: {
+                    position: 'right'
+                }
+            }
+        }
+    });
+}
+
+function updateSaldoChart(records, workdayMin) {
+
+    const canvas = document.getElementById('saldoChart');
+
+    if (!canvas) return;
+
+    const labels = [];
+    const values = [];
+    const colors = [];
+
+    records.forEach(r => {
+
+        if (
+            r.sede === 'Assenza' ||
+            !r.entrata ||
+            !r.uscita
+        ) {
+            return;
+        }
+
+        const e = toMin(r.entrata);
+        const u = toMin(r.uscita);
+
+        if (e === null || u === null) {
+            return;
+        }
+
+        const baseMin =
+            e < APP_CONFIG.WORKDAY_START_MINUTES
+                ? APP_CONFIG.WORKDAY_START_MINUTES
+                : e;
+
+        const uscitaTeorica =
+            baseMin + workdayMin;
+
+        const saldo =
+            u - uscitaTeorica;
+
+        const parts = r.date.split('-');
+
+        labels.push(
+            `${parts[2]}/${parts[1]}`
+        );
+
+        values.push(saldo);
+
+        colors.push(
+            saldo >= 0
+                ? '#22c55e'
+                : '#ef4444'
+        );
+    });
+
+    const ctx = canvas.getContext('2d');
+
+    if (saldoChart) {
+        saldoChart.destroy();
+    }
+
+    saldoChart = new Chart(ctx, {
+        type: 'bar',
+
+        data: {
+            labels: labels,
+
+            datasets: [{
+                label: 'Saldo minuti',
+                data: values,
+                backgroundColor: colors
+            }]
+        },
+
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+	    layout: {
+    padding: {
+        top: 10,
+        bottom: 20,
+        left: 10,
+        right: 10
+    }
+},	
+
+            plugins: {
+
+                legend: {
+                    display: false
+                },
+
+                tooltip: {
+                    callbacks: {
+
+                        label: function(context) {
+
+                            return `Saldo: ${fromMin(context.raw)}`;
+                        }
+                    }
+                }
+            },
+
+            scales: {
+
+                y: {
+
+                    beginAtZero: true,
+
+                    grid: {
+
+                        color: function(context) {
+
+                            if (context.tick.value === 0) {
+                                return '#ffffff';
+                            }
+
+                            return 'rgba(255,255,255,0.08)';
+                        },
+
+                        lineWidth: function(context) {
+
+                            if (context.tick.value === 0) {
+                                return 2;
+                            }
+
+                            return 1;
+                        }
+                    },
+
+                    ticks: {
+
+                        callback: function(value) {
+
+                            const h =
+                                Math.floor(
+                                    Math.abs(value) / 60
+                                );
+
+                            const m =
+                                Math.abs(value) % 60;
+
+                            const segno =
+                                value < 0 ? '-' : '+';
+
+                            return `${segno}${h}:${String(m).padStart(2, '0')}`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+}

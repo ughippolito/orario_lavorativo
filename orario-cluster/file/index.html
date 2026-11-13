@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%231e293b'/><circle cx='32' cy='32' r='20' stroke='%2338bdf8' stroke-width='4' fill='none'/><polyline points='32 20 32 32 40 32' stroke='%2338bdf8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/><path d='M40 44 L46 50 L56 38' stroke='%2322c55e' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro Orario Lavorativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+    <header>
+        <div class="header-content">
+            <div class="header-title">
+                <h1>Gestione Ore Lavoro versione 3.0</h1>
+                <h2 class="subtitle">Sistema di monitoraggio presenze</h2>
+                <div class="header-meta">
+                    Mese: <strong id="mese-label">...</strong> |
+                    Anno: <strong id="anno-label">...</strong>
+                </div>
+            </div>
+            <div class="header-datetime-container">
+                <div>
+                    <div id="date-display" class="date-display"></div>
+                    <div id="time-display" class="time"></div>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button id="theme-toggle" class="btn btn-dark-toggle">🌙 Dark Mode</button>
+                                <button id="btn-config" class="btn btn-primary">⚙️ Configura</button>
+                <button id="export-csv" class="btn btn-primary">⬇ Esporta</button>
+                                <a href="/download-manuale" style="text-decoration: none;">
+                    <button id="btn-manuale" class="btn btn-primary" type="button">📄 Manuale</button>
+                </a>
+                <button id="exit-page" class="btn btn-danger">✕ Esci</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        <main class="main-content">
+            <section class="section">
+                <h2>Inserimento Dati</h2>
+                <div class="form-grid">
+                    <div class="form-row"><label>Data</label><input type="date" id="data"></div>
+                    <div class="form-row"><label>Entrata</label><input type="time" id="entrata"></div>
+                    <div class="form-row">
+                        <label>Sede</label>
+                        <select id="sede">
+                            <option value="">— seleziona —</option>
+                            <option>Assenza</option>
+                                                        <option>Fuori Sede</option>
+                                                        <option>In Sede</option>
+                            <option>Smart Working</option>
+                        </select>
+                    </div>
+                    <div class="form-row"><label>Uscita</label><input type="time" id="uscita"></div>
+                    <div class="form-row">
+                        <label>
+                            Uscita Teorica
+                            <span class="chip info" style="display:inline-flex; font-size:0.6rem; padding:2px 5px; margin-left:5px; vertical-align: middle;">AUTO</span>
+                        </label>
+                        <input type="time" id="uscita-teorica" readonly
+                               style="cursor: not-allowed; opacity: 0.8;">
+                    </div>
+                    <div class="form-row"><label>Note</label><input type="text" id="note"></div>
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+                    <button class="btn btn-primary" id="btn-salva">SALVA</button>
+                    <button class="btn btn-secondary" id="btn-ripristina-form">ANNULLA</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Contatori</h2>
+                <div class="summary-grid">
+                    <div class="summary-item"><div>Giornate</div><div class="value" id="tot-giornate">0</div></div>
+                    <div class="summary-item"><div>Ore Presenza</div><div class="value" id="ore-presenza">0:00</div></div>
+                    <div class="summary-item"><div>Diff. Totale</div><div class="value" id="diff-totale">0:00</div></div>
+                    <div class="summary-item"><div>Rientri</div><div class="value" id="rientri">0</div></div>
+                    <div class="summary-item"><div>Smart</div><div class="value" id="smart-count">0</div></div>
+                    <div class="summary-item"><div>Assenze</div><div class="value" id="assenze-count">0</div></div>
+                </div>
+                                <section class="section dashboard-section">
+                    <h2>📊 Dashboard</h2>
+
+                    <div class="dashboard-grid">
+
+                        <div class="chart-card">
+                            <h3>Presenze</h3>
+                            <canvas id="presenzeChart"></canvas>
+                        </div>
+
+                        <div class="chart-card">
+                            <h3>Saldo Ore</h3>
+                            <canvas id="saldoChart"></canvas>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+
+            <div class="status-bar" id="status-bar" aria-live="polite">
+                <div class="chip info" id="chip-origin">
+                    <span class="label">Origine:</span> <span id="status-origin">Database locale</span>
+                </div>
+                <div class="chip success" id="status-view-chip">
+                    <span class="label">Vista:</span> <span id="status-view">—</span>
+                </div>
+                <div class="chip" id="status-filters-chip">
+                    <span class="label">Filtri:</span> <span id="status-filters">Nessun filtro</span>
+                </div>
+                <div class="status-spacer"></div>
+                <div class="chip warn">
+                    <span class="label">Righe:</span> <span id="status-counts">0/0</span>
+                </div>
+            </div>
+
+        <div id="table-view">
+            <section class="section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="th-date" data-label="Data" onclick="sortBy('date')" style="cursor:pointer">Data ↓</th>
+                            <th id="th-sede" data-label="Sede" onclick="sortBy('sede')" style="cursor:pointer">Sede ↕</th>
+                            <th id="th-entrata" data-label="Entrata" onclick="sortBy('entrata')" style="cursor:pointer">Entrata ↕</th>
+                            <th id="th-uscita" data-label="Uscita" onclick="sortBy('uscita')" style="cursor:pointer">Uscita ↕</th>
+                            <th id="th-presenza" data-label="Presenza" onclick="sortBy('presenza')" style="cursor:pointer">Presenza ( hh : mm) ↕</th>
+                            <th id="th-uscita-prev" data-label="Uscita Prevista" onclick="sortBy('uscita_teorica')" style="cursor:pointer">Uscita Prevista ↕</th>
+                            <th id="th-diff" data-label="Diff" onclick="sortBy('diff')" style="cursor:pointer">Diff ( hh : mm ) ↕</th>
+                            <th>Note</th>
+                            <th>Azioni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+                <div class="section mt-3" id="pager" aria-label="paginazione" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-secondary btn-sm" id="first-page">« Prima</button>
+                            <button class="btn btn-secondary btn-sm" id="prev-page">‹ Prec.</button>
+                            <span id="page-buttons" class="d-flex gap-1 mx-1"></span>
+                            <button class="btn btn-secondary btn-sm" id="next-page">Succ. ›</button>
+                            <button class="btn btn-secondary btn-sm" id="last-page">Ultima »</button>
+                        </div>
+                        <div class="text-muted small" id="page-info" style="font-weight: bold;">Pagina 1 di 1</div>
+                        <div class="d-flex align-items: center; gap: 0.5rem;">
+                            <label for="page-size" class="small mb-0" style="white-space: nowrap;">Righe per pagina:</label>
+                            <select id="page-size" class="form-select form-select-sm" style="width: auto;">
+                                <option value="10">10</option>
+                                <option value="30" selected>30</option>
+                                <option value="60">60</option>
+                                <option value="100">100</option>
+                                <option value="150">150</option>
+                                <option value="300">300</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+	<div id="calendar-view"
+     style="display:none;">
+
+    <section class="section">
+
+        <h2>🗓 Calendario</h2>
+
+        <div id="calendar-detail-panel">
+
+    <div class="calendar-detail-item">
+        <div class="calendar-detail-label">
+            Data
+        </div>
+
+        <div id="detail-data">
+            --
+        </div>
+    </div>
+
+    <div class="calendar-detail-item">
+        <div class="calendar-detail-label">
+            Uscita Prevista
+        </div>
+
+        <div id="detail-uscita-prevista">
+            --
+        </div>
+    </div>
+
+    <div class="calendar-detail-item">
+        <div class="calendar-detail-label">
+            Note
+        </div>
+
+        <div id="detail-note">
+            Passa sul giorno...
+        </div>
+    </div>
+
+</div>
+
+        <div id="calendar-container">
+
+            Calendario in costruzione...
+
+        </div>
+
+    </section>
+
+</div>
+        </main>
+
+        <aside class="right-column">
+
+                    <section id="config-box" class="section" style="display: none";>
+                <h3>Configurazioni</h3>
+                                <label>
+                    Giornata Lavorativa
+                    <span class="tooltip-container">
+                        ⓘ
+                        <span class="tooltip-text">
+                            Imposta l'orario contrattuale comprensivo di pausa pranzo.
+                            Verrà usato per calcolare l'uscita teorica giornaliera relativa all'orario di entrata
+                                                        e la differenza oraria giornaliera rispetto all'orario di uscita effettiva.
+                                                        Per default è impostato un orario di 8h e 06m.
+
+                        </span>
+                    </span>
+                </label>
+                <select id="filter-ore-lavoro" class="value" style="margin-bottom:20px;">
+                    <option value="">--- ore ---</option>
+                </select>
+                                <select id="filter-minuti-lavoro" class="value" style="margin-bottom:20px;">
+                    <option value="">--- minuti ---</option>
+                </select>
+                                <label>
+                    Rientri Mensili
+                    <span class="tooltip-container">
+                        ⓘ
+                        <span class="tooltip-text">
+                            Indica il numero minimo di rientri in sede previsti dalla normativa aziendale.
+                                                        Per default è impostato un numero di rientri di 4 giornate.
+                        </span>
+                    </span>
+                </label>
+                                <select id="filter-rientri-mensili" class="value" style="margin-bottom:20px;">
+                    <option value="">--- giornate ---</option>
+                </select>
+                                <button class="btn btn-danger" id="btn-chiudi-config" style="width:100%;">CHIUDI</button>
+                        </section>
+
+                <section class="section">
+    <h3>Visualizzazione</h3>
+
+    <button class="btn btn-primary"
+            id="btn-view-table"
+            style="width:100%; margin-bottom:5px;">
+        📋 TABELLA
+    </button>
+
+    <button class="btn btn-secondary"
+            id="btn-view-calendar"
+            style="width:100%; margin-bottom:15px;">
+        🗓 CALENDARIO
+    </button>
+
+    <hr style="margin:15px 0; opacity:0.2;">
+
+    <button class="btn btn-secondary"
+            id="btn-mese-corrente"
+            style="width:100%; margin-bottom:10px;">
+        MESE CORRENTE
+    </button>
+
+    <button class="btn btn-secondary"
+            id="btn-anno-corrente"
+            style="width:100%; margin-bottom:10px;">
+        ANNO CORRENTE
+    </button>
+
+    <button class="btn btn-danger"
+            id="btn-elimina-tutto"
+            style="width:100%;">
+        ELIMINA TUTTO
+    </button>
+</section>
+
+            <section class="section">
+                <h3>Filtro</h3>
+                <label>Mese <span id="badge-mese" class="chip info" style="display:none; font-size:0.6rem; padding:2px 5px; margin-left:5px;">AUTO</span></label>
+                <select id="filter-mese" class="form-select" style="margin-bottom:10px;">
+                    <option value="">— tutti i mesi —</option>
+                    <option value="01">Gennaio</option>
+                    <option value="02">Febbraio</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Aprile</option>
+                    <option value="05">Maggio</option>
+                    <option value="06">Giugno</option>
+                    <option value="07">Luglio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Settembre</option>
+                    <option value="10">Ottobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Dicembre</option>
+                </select>
+                <label>Anno <span id="badge-anno" class="chip info" style="display:none; font-size:0.6rem; padding:2px 5px; margin-left:5px;">AUTO</span></label>
+                <select id="filter-anno" class="form-select" style="margin-bottom:10px;">
+                    <option value="">— tutti gli anni —</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                    <option>2028</option>
+                    <option>2029</option>
+                    <option>2030</option>
+                </select>
+                <label>Sede</label>
+                <select id="filter-sede-select" class="form-select" style="margin-bottom:10px;">
+                    <option value="">Tutte le sedi</option>
+                                        <option value="Assenza">Assenza</option>
+                                        <option value="Fuori Sede">Fuori Sede</option>
+                    <option value="In Sede">In Sede</option>
+                    <option value="Smart Working">Smart Working</option>
+                </select>
+                <label>Cerca nelle note</label>
+                <input type="text" id="filter-note" class="form-control" placeholder="Es: Permesso..." style="margin-bottom:10px;">
+                <button id="btn-reset-filtri-avanzati" class="btn btn-outline-secondary" style="width:100%;">RESET FILTRI</button>
+            </section>
+
+            <section class="section">
+                <h3>Backup & Archivio</h3>
+                <label>Backup</label>
+                <select id="backup-select" style="margin-bottom:10px;"><option value="">-- seleziona --</option></select>
+                <button class="btn btn-secondary" id="restore-backup" style="width:100%;">RIPRISTINA</button>
+                <hr style="margin: 15px 0; opacity: 0.2;">
+                <label>Archivio</label>
+                <select id="archive-select" style="margin-bottom:10px;"><option value="">-- seleziona --</option></select>
+                <button class="btn btn-secondary" id="carica-archivio" style="width:100%;">CARICA</button>
+            </section>
+        </aside>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/charts.js"></script>
+        <script src="js/app.js"></script>
+
+</body>
+</html>
