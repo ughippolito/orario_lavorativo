@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "=== Configurazione ambiente di sviluppo per orario_lavorativo ==="
+echo "=== Configurazione ambiente WSL2 per orario_lavorativo ==="
 
 # ==========================================
 # 1. Installazione di .wslconfig in Windows
