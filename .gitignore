@@ -2,16 +2,10 @@
 backup/*
 logs/*
 
-# Gestione DATA: IGNORA i file di backup e di archivio
-data/backups/*.json
-data/archivio/*.json
-data/workhours.json
+# Ignora il link simbolico 'data' e la cartella originale
+data
+data_orig/
 
-# Sincronizza esplicitamente la cartella archivio
-#!data/archivio/*
-
-# Mantiene le strutture delle cartelle
+# Mantiene le strutture delle cartelle vuote
 !backup/.gitkeep
-!data/backups/.gitkeep
-!data/archivio/.gitkeep
 !logs/.gitkeep
