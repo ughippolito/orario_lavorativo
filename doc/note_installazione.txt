@@ -18,7 +18,7 @@ k3d --version
 
 # Installa kubectl
 sudo snap install kubectl --classic
-kubect version
+kubectl version
 
 #Scarica e installa il Progetto
 #Apri il terminale sul PC
