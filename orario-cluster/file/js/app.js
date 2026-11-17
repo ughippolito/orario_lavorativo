@@ -765,8 +765,8 @@ async function loadYearData(anno) {
 
             const archives =
                 await apiLoadArchives();
-
-            const archiveFile =
+            
+	    const archiveFile =
                 archives.find(
                     a => a.includes(
                         String(anno)
@@ -811,7 +811,7 @@ async function loadYearData(anno) {
     }
 }
 
-function previousMonth() {
+async function previousMonth() {
 
     const meseSelect =
         document.getElementById(
@@ -853,7 +853,7 @@ function previousMonth() {
     renderCalendar();
 }
 
-function nextMonth() {
+async function nextMonth() {
 
     const meseSelect =
         document.getElementById(
