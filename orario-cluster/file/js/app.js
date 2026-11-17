@@ -743,6 +743,86 @@ function clearCalendarDetail() {
     ).textContent = '-';
 }
 
+function previousMonth() {
+
+    const meseSelect =
+        document.getElementById(
+            'filter-mese'
+        );
+
+    const annoSelect =
+        document.getElementById(
+            'filter-anno'
+        );
+
+    let mese =
+        parseInt(
+            meseSelect.value
+        );
+
+    let anno =
+        parseInt(
+            annoSelect.value
+        );
+
+    mese--;
+
+    if (mese < 1) {
+
+        mese = 12;
+        anno--;
+    }
+
+    meseSelect.value =
+        String(mese).padStart(2, '0');
+
+    annoSelect.value =
+        String(anno);
+
+    refreshUI();
+    renderCalendar();
+}
+
+function nextMonth() {
+
+    const meseSelect =
+        document.getElementById(
+            'filter-mese'
+        );
+
+    const annoSelect =
+        document.getElementById(
+            'filter-anno'
+        );
+
+    let mese =
+        parseInt(
+            meseSelect.value
+        );
+
+    let anno =
+        parseInt(
+            annoSelect.value
+        );
+
+    mese++;
+
+    if (mese > 12) {
+
+        mese = 1;
+        anno++;
+    }
+
+    meseSelect.value =
+        String(mese).padStart(2, '0');
+
+    annoSelect.value =
+        String(anno);
+
+    refreshUI();
+    renderCalendar();
+}
+
 
 function renderCalendar() {
 
@@ -832,7 +912,21 @@ function renderCalendar() {
     let html = `
 
         <div class="calendar-title">
-            🗓 ${nomiMesi[mese - 1]} ${annoCalendario}
+            <button
+        class="calendar-nav-btn"
+        onclick="previousMonth()">
+        ◀
+    </button>
+
+    <span>
+        🗓 ${nomiMesi[mese - 1]} ${annoCalendario}
+    </span>
+
+    <button
+        class="calendar-nav-btn"
+        onclick="nextMonth()">
+        ▶
+    </button>
         </div>
 
         <div class="calendar-grid">

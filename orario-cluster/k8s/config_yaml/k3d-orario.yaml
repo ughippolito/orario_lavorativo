@@ -32,8 +32,8 @@ volumes:
       - agent:*
   - volume: $INSTALL_DIR/orario_lavorativo/manuale:/mnt/data/manuale
     nodeFilters:
-      - agent:*    
+      - agent:*
   - volume: $INSTALL_DIR/orario_lavorativo/orario-cluster/k8s/config_yaml/registries.yaml:/etc/rancher/k3s/registries.yaml
     nodeFilters:
      - server:*
-     - agent:*
+     - agent:*      
