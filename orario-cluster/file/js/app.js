@@ -743,6 +743,74 @@ function clearCalendarDetail() {
     ).textContent = '-';
 }
 
+async function loadYearData(anno) {
+
+    const currentYear =
+        new Date().getFullYear();
+
+    try {
+
+        if (anno == currentYear) {
+
+            records =
+                await apiLoadRecords();
+
+            filterMode = 'anno';
+
+            updateHeaderLabels(
+                currentYear
+            );
+
+        } else {
+
+            const archives =
+                await apiLoadArchives();
+
+            const archiveFile =
+                archives.find(
+                    a => a.includes(
+                        String(anno)
+                    )
+                );
+
+            if (!archiveFile) {
+
+                console.warn(
+                    `Archivio ${anno} non trovato`
+                );
+
+                records = [];
+
+                return;
+            }
+
+            records =
+                await apiLoadArchive(
+                    archiveFile
+                );
+
+            filterMode = 'archivio';
+
+            updateHeaderLabels(
+                anno
+            );
+        }
+		
+		document.getElementById(
+            'filter-anno'
+        ).value = String(anno);
+
+        currentPage = 1;
+
+    } catch (err) {
+
+        console.error(
+            'Errore caricamento anno:',
+            err
+        );
+    }
+}
+
 function previousMonth() {
 
     const meseSelect =
@@ -778,7 +846,9 @@ function previousMonth() {
 
     annoSelect.value =
         String(anno);
-
+		
+    await loadYearData(anno);
+	
     refreshUI();
     renderCalendar();
 }
@@ -818,6 +888,8 @@ function nextMonth() {
 
     annoSelect.value =
         String(anno);
+		
+	await loadYearData(anno);	
 
     refreshUI();
     renderCalendar();
